@@ -15,19 +15,19 @@
     nav a { text-decoration: none; color: #f0f0f0; margin: 0 1.25em; font-weight: 500; font-size: clamp(0.9rem, 2vw, 1.1rem); transition: color 0.3s; }
     nav a:hover { color: #d2b48c; }
 
-    /* Cover Image */
-    .cover { margin-top: 70px; }
-    .cover img { width: 100%; height: 35vh; object-fit: cover; }
+    /* Cover Image and Profile */
+    .cover { position: relative; margin-top: 70px; }
+    .cover img.cover-img { width: 100%; height: 20vh; object-fit: cover; }
+    .profile-pic { position: absolute; bottom: -50px; left: 10%; transform: translateX(0); border-radius: 50%; border: 3px solid #d2b48c; object-fit: cover; width: 150px; height: 150px; }
 
     /* Sections */
-    section { width: 95%; max-width: none; margin: 2.5em auto; padding: 0 1em; scroll-margin-top: 80px; }
+    section { width: 95%; max-width: none; margin: 5em auto 2.5em auto; padding: 0 1em; scroll-margin-top: 80px; }
     h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); border-bottom: 2px solid #d2b48c; padding-bottom: 0.3em; color: #d2b48c; }
     h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
     p, li { font-size: clamp(0.9rem, 2vw, 1.1rem); line-height: 1.5; }
 
     /* About */
-    .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25em; }
-    .about-content img { width: clamp(100px, 20vw, 150px); height: clamp(100px, 20vw, 150px); border-radius: 50%; object-fit: cover; border: 3px solid #d2b48c; }
+    .about-content { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.25em; margin-top: 60px; }
     .contact-icons a { margin: 0 0.625em; color: #d2b48c; font-size: clamp(1.2rem, 3vw, 1.8rem); text-decoration: none; }
 
     /* Lists with icons */
@@ -42,8 +42,9 @@
     @media (max-width: 600px) {
       nav { flex-wrap: wrap; }
       nav a { margin: 0.625em; }
-      .cover img { height: 25vh; }
-      .about-content { flex-direction: column; align-items: center; }
+      .cover img.cover-img { height: 15vh; }
+      .profile-pic { bottom: -45px; left: 50%; transform: translateX(-50%); }
+      .about-content { flex-direction: column; align-items: center; margin-top: 40px; }
     }
   </style>
 </head>
@@ -62,15 +63,15 @@
   <div class="cover">
     <picture>
       <source media="(max-width:600px)" srcset="images/cover.jpg">
-      <img src="images/cover.jpg" alt="Cover Photo">
+      <img src="images/cover.jpg" alt="Cover Photo" class="cover-img">
     </picture>
+    <img src="images/profile.jpg" alt="MSN Chowdhury" class="profile-pic">
   </div>
 
   <!-- About Section -->
   <section id="about">
     <h2>About</h2>
     <div class="about-content">
-      <img src="images/profile.jpg" alt="MSN Chowdhury">
       <div>
         <div class="contact-icons">
           <a href="mailto:chowdh31@purdue.edu"><i class="fas fa-envelope"></i></a>
