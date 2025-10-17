@@ -1,35 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samin | Research Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Samin Nur Chowdhury</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #121212; color: #f0f0f0; }
+    header { position: fixed; top: 0; width: 100%; background: #1f1f1f; z-index: 1000; }
+    nav { display: flex; justify-content: center; padding: 15px; }
+    nav a { text-decoration: none; color: #f0f0f0; margin: 0 20px; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #d2b48c; }
+    .cover { margin-top: 70px; }
+    .cover img { width: 100%; height: 35vh; object-fit: cover; }
+    section { max-width: 900px; margin: 40px auto; padding: 0 20px; scroll-margin-top: 80px; }
+    h2 { border-bottom: 2px solid #d2b48c; padding-bottom: 5px; color: #d2b48c; }
+    .about-content { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+    .about-content img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #d2b48c; }
+    .contact-icons a { margin: 0 10px; color: #d2b48c; font-size: 1.5em; text-decoration: none; }
+    ul { list-style: none; padding-left: 0; }
+    #education li::before { content: '\f19d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
+    #experience li::before { content: '\f0b1'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
+    #research li::before, #publications li::before, #projects li::before, #about ul li::before { content: '\f058'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #888; }
+    @media (max-width: 600px) { nav { flex-wrap: wrap; } nav a { margin: 10px; } .cover img { height: 25vh; } .about-content { flex-direction: column; align-items: center; } }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="images/profile.jpg" alt="Samin" class="profile-img">
-      <h1>Mohammad Samin Nur Chowdhury</h1>
-      <p>Research Assistant | Purdue University</p>
-    </div>
+  <header>
     <nav>
-      <ul>
-        <li><a href="#" data-section="about">About & Skills</a></li>
-        <li><a href="#" data-section="research">Research</a></li>
-        <li><a href="#" data-section="publications">Publications</a></li>
-        <li><a href="#" data-section="contact">Contact</a></li>
-      </ul>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
     </nav>
   </header>
 
-  <main id="content"></main>
+  <div class="cover">
+    <picture>
+      <source media="(max-width:600px)" srcset="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Cover Photo">
+    </picture>
+  </div>
 
-  <footer>
-    <p>© 2025 Mohammad Samin Nur Chowdhury</p>
-  </footer>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <img src="https://via.placeholder.com/150" alt="Samin Chowdhury">
+      <div>
+        <div class="contact-icons">
+          <a href="mailto:chowdh31@purdue.edu"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/mohammad-samin-nur-chowdhury"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+        <p><strong>Mohammad Samin Nur Chowdhury</strong> is a Ph.D. candidate in Electrical Engineering at Purdue University...</p>
+        <h3>Areas of Expertise</h3>
+        <p>Image Processing | Computational Imaging | Camera ISP | Inverse Problems | Machine Learning & Deep Learning | Physics-Informed AI | Generative AI | Diffusion Models | Vision Transformers | GPU & Parallel Computing</p>
+        <h3>Awards</h3>
+        <ul>
+          <li>Best Student Paper Award, IEEE ICIP 2023</li>
+          <li>Best Presentation Award, WCNR 2024</li>
+          <li>Top 3% Paper Recognition, IEEE ICASSP 2023</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Ph.D. in Electrical Engineering – Purdue University | GPA: 4.0 | 2021 – Present</li>
+      <li>M.S. in Electrical Engineering – Arizona State University | 2019</li>
+      <li>B.S. in Electrical Engineering – Bangladesh University of Engineering & Technology | 2016</li>
+    </ul>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Research Assistant, Purdue University</strong> | May 2021 – Present<br>Developed algorithms integrating physics-based models with AI...</li>
+      <li><strong>Teaching Assistant, Purdue University</strong> | Jan 2021 – May 2021<br>Led Python-based lab sessions...</li>
+      <li><strong>Image Quality Engineer, Microsoft</strong> | Jul 2020 – Dec 2020<br>Optimized camera ISP and image quality...</li>
+      <li><strong>AI/ML Research Intern, UNAR Labs</strong> | Summer 2020<br>Designed AI-driven computer vision algorithms...</li>
+      <li><strong>Teaching Assistant, Arizona State University</strong> | Aug 2018 – May 2019<br>Conducted MATLAB and GNU Radio-based lab sessions...</li>
+    </ul>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research">
+    <h2>Research</h2>
+    <p>Research focuses on innovative algorithms leveraging machine learning and physics-based modeling for hyperspectral and multidimensional imaging data.</p>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <!-- Journals -->
+    <h3>Journal Articles</h3>
+    <ul>
+      <li>“Fast Hyperspectral Neutron Tomography,” <em>IEEE Trans. Comput. Imaging</em>, 2025</li>
+      <li>“A machine learning decision criterion for reducing scan time...,” <em>Scientific Reports</em>, 2024</li>
+      <li>“Deep Neural Network for Visual Stimulus-Based Reaction Time Estimation...,” <em>Sensors</em>, 2020</li>
+    </ul>
+    <!-- Conference Papers -->
+    <h3>Conference Papers</h3>
+    <ul>
+      <li>“MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction,” ICIP, 2025</li>
+      <li>“Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography,” ICIP, 2023</li>
+      <li>“An Edge Alignment-based Orientation Selection Method for Neutron Tomography,” ICASSP, 2023</li>
+      <li>“Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral Neutron Tomography,” Asilomar, 2024</li>
+      <li>“Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction,” WCNR, 2024</li>
+      <li>“Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography using Artificial Intelligence,” WCNR, 2024</li>
+      <li>“3D CNN to Estimate Reaction Time from Multi-Channel EEG,” EMBC, 2021</li>
+      <li>“A Generalized Model to Estimate Reaction Time Corresponding to Visual Stimulus Using Single-Trial EEG,” EMBC, 2020</li>
+    </ul>
+    <!-- Patent -->
+    <h3>Patent</h3>
+    <ul>
+      <li>“Biometric identification using electroencephalogram (EEG) signals,” US Patent App. 17/402,049, filed 2022</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Fast Large-Scale
