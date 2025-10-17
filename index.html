@@ -11,10 +11,7 @@
   <style>
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px; /* fix header overlap */
-    }
-    @media (max-width: 600px) {
-      html { scroll-padding-top: 120px; }
+      /* removed scroll-padding-top to fix previous section showing issue */
     }
 
     body {
@@ -23,16 +20,14 @@
       background: #121212;
       color: #f0f0f0;
       font-size: clamp(0.95rem, 1vw, 1.05rem);
-      overflow-x: hidden;
     }
 
     header {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      z-index: 1000;
       background: #1f1f1f;
+      z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.5);
     }
 
@@ -53,8 +48,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover,
-    nav a.active {
+    nav a:hover {
       color: #d2b48c;
     }
 
@@ -69,8 +63,7 @@
       transition: width 0.3s;
     }
 
-    nav a:hover::after,
-    nav a.active::after {
+    nav a:hover::after {
       width: 100%;
     }
 
@@ -90,7 +83,7 @@
     .profile-pic {
       position: absolute;
       bottom: -50px;
-      left: 10%;
+      left: 5%; /* aligned with section headings */
       border-radius: 50%;
       border: 3px solid #d2b48c;
       object-fit: cover;
@@ -100,18 +93,19 @@
 
     .profile-text {
       position: relative;
-      margin-left: 10%;
+      margin-left: 5%; /* aligned with section headings */
       margin-top: 60px;
       display: flex;
       flex-direction: column;
       gap: 0.2em;
     }
 
-    .profile-text .name {
+    .profile-text h1.name {
       font-weight: bold;
       color: #d2b48c;
       font-size: clamp(1.5rem, 2.5vw, 2rem);
       line-height: 1;
+      margin: 0;
     }
 
     .profile-text .title {
@@ -135,6 +129,7 @@
       width: 95%;
       margin: 5em auto 2.5em auto;
       padding: 0 1em;
+      scroll-margin-top: 90px; /* aligns section headers below fixed header */
     }
 
     h2 {
@@ -153,7 +148,10 @@
       line-height: 1.5;
     }
 
-    ul { list-style: none; padding-left: 0; }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
     /* Icons for list items */
     #education li::before { content: '\f19d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
@@ -173,10 +171,10 @@
       nav { flex-wrap: wrap; }
       nav a { margin: 0.625em; }
       .cover img.cover-img { height: 28vh; }
-      .profile-pic { bottom: -45px; left: 50%; transform: translateX(-50%); }
-      .profile-text { left: 50%; transform: translateX(-50%); text-align: center; margin-top: 50px; }
-      .profile-text .contacts { justify-content: center; }
-      .about-content { flex-direction: column; align-items: center; margin-top: 40px; }
+      .profile-pic { bottom: -45px; left: 5%; transform: none; }
+      .profile-text { left: 5%; transform: none; text-align: left; margin-top: 50px; }
+      .profile-text .contacts { justify-content: flex-start; }
+      .about-content { flex-direction: column; align-items: flex-start; margin-top: 40px; }
     }
   </style>
 </head>
@@ -184,7 +182,7 @@
 <body>
   <header>
     <nav>
-      <a href="#about" class="active">About</a>
+      <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#research">Research</a>
@@ -198,11 +196,11 @@
       <source media="(max-width:600px)" srcset="images/cover.jpg">
       <img src="images/cover.jpg" alt="Cover Photo" class="cover-img">
     </picture>
-    <img src="images/profile.jpg" alt="MSN Chowdhury" class="profile-pic" loading="lazy">
+    <img src="images/profile.jpg" alt="Portrait of Mohammad Samin Nur Chowdhury" class="profile-pic" loading="lazy">
   </div>
 
   <div class="profile-text">
-    <span class="name">Mohammad Samin Nur Chowdhury</span>
+    <h1 class="name">Mohammad Samin Nur Chowdhury</h1>
     <span class="title">Ph.D. Candidate | Purdue University</span>
     <div class="contacts">
       <a href="mailto:chowdh31@purdue.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -294,22 +292,5 @@
   <footer>
     &copy; 2025 Mohammad Samin Nur Chowdhury
   </footer>
-
-  <script>
-    // Highlight active nav link on scroll
-    const sections = document.querySelectorAll('main section');
-    const navLinks = document.querySelectorAll('nav a');
-
-    function activateNav() {
-      let index = sections.length;
-
-      while(--index && window.scrollY + 110 < sections[index].offsetTop) {} // 110px for header + padding
-      navLinks.forEach(link => link.classList.remove('active'));
-      navLinks[index].classList.add('active');
-    }
-
-    activateNav();
-    window.addEventListener('scroll', activateNav);
-  </script>
 </body>
 </html>
