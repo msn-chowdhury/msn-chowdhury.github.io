@@ -7,7 +7,7 @@
   <title>Mohammad Samin Nur Chowdhury</title>
   
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-  
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -66,6 +66,7 @@
       width: 100%;
     }
 
+    /* Cover + profile */
     .cover {
       position: relative;
       margin-top: 70px;
@@ -76,24 +77,25 @@
       width: 100%;
       height: 40vh;
       object-fit: cover;
+      display: block;
     }
 
     .profile-pic {
       position: absolute;
-      left: 5%; /* aligned with section headings */
-      bottom: 0;
-      transform: translateY(50%); /* center aligns with bottom of cover */
+      top: 100%; /* bottom of cover */
+      left: 5%;
+      transform: translateY(-50%); /* center on bottom */
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       border: 3px solid #d2b48c;
       object-fit: cover;
-      width: 150px;
-      height: 150px;
+      z-index: 2;
     }
 
     .profile-text {
-      position: relative;
-      margin-left: 5%; /* aligned with section headings */
-      margin-top: 85px;
+      margin-left: 5%;
+      margin-top: 85px; /* profile-pic height /2 + gap */
       display: flex;
       flex-direction: column;
       gap: 0.2em;
@@ -167,13 +169,14 @@
     }
 
     @media (max-width: 600px) {
+        main section {
+            scroll-margin-top: 110px; /* header height + small gap */
+        }
       nav { flex-wrap: wrap; }
       nav a { margin: 0.625em; }
-      .cover img.cover-img { height: 28vh; }
-      .profile-pic { width: 120px; height: 120px; bottom: 0; transform: translateY(50%); }
-      .profile-text { left: 5%; transform: none; text-align: left; margin-top: 70px; }
-      .profile-text .contacts { justify-content: flex-start; }
-      .about-content { flex-direction: column; align-items: flex-start; margin-top: 40px; }
+      .cover img.cover-img { height: 40vh; }
+      .profile-pic { width: 120px; height: 120px; transform: translateY(-50%); }
+      .profile-text { margin-top: 65px; } /* profile-pic height /2 + gap */
     }
   </style>
 </head>
@@ -293,4 +296,3 @@
   </footer>
 </body>
 </html>
-
