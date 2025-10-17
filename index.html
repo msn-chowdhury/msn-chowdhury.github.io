@@ -3,41 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ph.D. Candidate in Electrical Engineering at Purdue University specializing in computational imaging, inverse problems, and machine learning." />
   <title>Mohammad Samin Nur Chowdhury</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #121212; color: #f0f0f0; font-size: 1rem; }
-    header { position: fixed; top: 0; width: 100%; background: #1f1f1f; z-index: 1000; }
-    nav { display: flex; justify-content: center; padding: 1em; }
-    nav a { text-decoration: none; color: #f0f0f0; margin: 0 1.25em; font-weight: 500; font-size: clamp(0.9rem, 2vw, 1.1rem); transition: color 0.3s; }
-    nav a:hover { color: #d2b48c; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px; /* fix header overlap */
+    }
+    @media (max-width: 600px) {
+      html { scroll-padding-top: 120px; }
+    }
 
-    .cover { position: relative; margin-top: 70px; min-height: 40vh; }
-    .cover img.cover-img { width: 100%; height: 40vh; object-fit: cover; }
-    .profile-pic { position: absolute; bottom: -50px; left: 10%; border-radius: 50%; border: 3px solid #d2b48c; object-fit: cover; width: 150px; height: 150px; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #121212;
+      color: #f0f0f0;
+      font-size: clamp(0.95rem, 1vw, 1.05rem);
+      overflow-x: hidden;
+    }
 
-    .profile-text { position: relative; margin-left: 10%; margin-top: 60px; display: flex; flex-direction: column; gap: 0.2em; }
-    .profile-text .name { font-weight: bold; color: #d2b48c; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1; }
-    .profile-text .title { color: white; font-size: clamp(1rem, 2vw, 1.2rem); }
-    .profile-text .contacts { display: flex; gap: 0.625em; margin-top: 0.3em; }
-    .profile-text .contacts a { color: #d2b48c; font-size: clamp(1.2rem, 3vw, 1.5rem); text-decoration: none; }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: #1f1f1f;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
 
-    section { width: 95%; max-width: none; margin: 5em auto 2.5em auto; padding: 0 1em; scroll-margin-top: 80px; }
-    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); border-bottom: 2px solid #d2b48c; padding-bottom: 0.3em; color: #d2b48c; }
-    h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
-    p, li { font-size: clamp(0.9rem, 2vw, 1.1rem); line-height: 1.5; }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1em;
+    }
 
-    .about-content { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.25em; margin-top: 60px; }
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #f0f0f0;
+      margin: 0 1em;
+      font-weight: 500;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #d2b48c;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #d2b48c;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .cover {
+      position: relative;
+      margin-top: 70px;
+      min-height: 40vh;
+      padding-bottom: 60px;
+    }
+
+    .cover img.cover-img {
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+    }
+
+    .profile-pic {
+      position: absolute;
+      bottom: -50px;
+      left: 10%;
+      border-radius: 50%;
+      border: 3px solid #d2b48c;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+
+    .profile-text {
+      position: relative;
+      margin-left: 10%;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+    }
+
+    .profile-text .name {
+      font-weight: bold;
+      color: #d2b48c;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1;
+    }
+
+    .profile-text .title {
+      color: white;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .profile-text .contacts {
+      display: flex;
+      gap: 0.625em;
+      margin-top: 0.3em;
+    }
+
+    .profile-text .contacts a {
+      color: #d2b48c;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      text-decoration: none;
+    }
+
+    main section {
+      width: 95%;
+      margin: 5em auto 2.5em auto;
+      padding: 0 1em;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      border-bottom: 2px solid #d2b48c;
+      padding-bottom: 0.3em;
+      color: #d2b48c;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    p, li {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      line-height: 1.5;
+    }
+
     ul { list-style: none; padding-left: 0; }
 
+    /* Icons for list items */
     #education li::before { content: '\f19d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
     #experience li::before { content: '\f0b1'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
     #research li::before, #projects li::before, #about ul li::before { content: '\f058'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
     #publications li::before { content: '\f304'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
     #about ul li::before { content: '\f091'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
 
-    footer { text-align: center; padding: 1.25em; font-size: clamp(0.8rem, 1.5vw, 0.9rem); color: #888; }
+    footer {
+      text-align: center;
+      padding: 1.25em;
+      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      color: #888;
+    }
 
     @media (max-width: 600px) {
       nav { flex-wrap: wrap; }
@@ -50,10 +180,11 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav>
-      <a href="#about">About</a>
+      <a href="#about" class="active">About</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#research">Research</a>
@@ -67,105 +198,118 @@
       <source media="(max-width:600px)" srcset="images/cover.jpg">
       <img src="images/cover.jpg" alt="Cover Photo" class="cover-img">
     </picture>
-    <img src="images/profile.jpg" alt="MSN Chowdhury" class="profile-pic">
+    <img src="images/profile.jpg" alt="MSN Chowdhury" class="profile-pic" loading="lazy">
   </div>
 
   <div class="profile-text">
     <span class="name">Mohammad Samin Nur Chowdhury</span>
     <span class="title">Ph.D. Candidate | Purdue University</span>
     <div class="contacts">
-      <a href="mailto:chowdh31@purdue.edu"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/mohammad-samin-nur-chowdhury"><i class="fab fa-linkedin"></i></a>
-      <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ"><i class="fas fa-graduation-cap"></i></a>
+      <a href="mailto:chowdh31@purdue.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mohammad-samin-nur-chowdhury" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
     </div>
   </div>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About</h2>
-    <div class="about-content">
-      <div>
-        <p><strong>Mohammad Samin Nur Chowdhury</strong> is a Ph.D. candidate in Electrical Engineering at Purdue University...</p>
-        <h3>Areas of Expertise</h3>
-        <p>Image Processing | Computational Imaging | Camera ISP | Inverse Problems | Machine Learning & Deep Learning | Physics-Informed AI | Generative AI | Diffusion Models | Vision Transformers | GPU & Parallel Computing</p>
-        <h3>Awards</h3>
-        <ul>
-          <li>Best Student Paper Award, IEEE ICIP 2023</li>
-          <li>Best Presentation Award, WCNR 2024</li>
-          <li>Top 3% Paper Recognition, IEEE ICASSP 2023</li>
-        </ul>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <div class="about-content">
+        <div>
+          <p><strong>Mohammad Samin Nur Chowdhury</strong> is a Ph.D. candidate in Electrical and Computer Engineering at Purdue University. His research focuses on developing innovative algorithms that combine physics-based modeling and machine learning for hyperspectral neutron computed tomography and multidimensional imaging applications.</p>
+          <h3>Areas of Expertise</h3>
+          <p>Image Processing | Computational Imaging | Camera ISP | Inverse Problems | Machine Learning & Deep Learning | Physics-Informed AI | Generative AI | Diffusion Models | Vision Transformers | GPU & Parallel Computing</p>
+          <h3>Awards</h3>
+          <ul>
+            <li>Best Student Paper Award, IEEE ICIP 2023</li>
+            <li>Best Presentation Award, WCNR 2024</li>
+            <li>Top 3% Paper Recognition, IEEE ICASSP 2023</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li>Ph.D. in Electrical Engineering – Purdue University | GPA: 4.0 | 2021 – Present</li>
-      <li>M.S. in Electrical Engineering – Arizona State University | 2019</li>
-      <li>B.S. in Electrical Engineering – Bangladesh University of Engineering & Technology | 2016</li>
-    </ul>
-  </section>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>Ph.D. in Electrical Engineering – Purdue University | GPA: 4.0 | 2021 – Present</li>
+        <li>M.S. in Electrical Engineering – Arizona State University | 2019</li>
+        <li>B.S. in Electrical Engineering – Bangladesh University of Engineering & Technology | 2016</li>
+      </ul>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Research Assistant, Purdue University</strong> | May 2021 – Present<br>Developed algorithms integrating physics-based models with AI...</li>
-      <li><strong>Teaching Assistant, Purdue University</strong> | Jan 2021 – May 2021<br>Led Python-based lab sessions...</li>
-      <li><strong>Image Quality Engineer, Microsoft</strong> | Jul 2020 – Dec 2020<br>Optimized camera ISP and image quality...</li>
-      <li><strong>AI/ML Research Intern, UNAR Labs</strong> | Summer 2020<br>Designed AI-driven computer vision algorithms...</li>
-      <li><strong>Teaching Assistant, Arizona State University</strong> | Aug 2018 – May 2019<br>Conducted MATLAB and GNU Radio-based lab sessions...</li>
-    </ul>
-  </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Research Assistant, Purdue University</strong> | May 2021 – Present<br>Developed algorithms integrating physics-based models with AI for hyperspectral neutron computed tomography and material decomposition.</li>
+        <li><strong>Teaching Assistant, Purdue University</strong> | Jan 2021 – May 2021<br>Led Python-based lab sessions for Digital Signal Processing.</li>
+        <li><strong>Image Quality Engineer, Microsoft</strong> | Jul 2020 – Dec 2020<br>Optimized camera ISP and image quality for mobile devices.</li>
+        <li><strong>AI/ML Research Intern, UNAR Labs</strong> | Summer 2020<br>Designed AI-driven computer vision algorithms for accessibility applications.</li>
+        <li><strong>Teaching Assistant, Arizona State University</strong> | Aug 2018 – May 2019<br>Conducted MATLAB and GNU Radio-based lab sessions on Communication Systems.</li>
+      </ul>
+    </section>
 
-  <!-- Research Section -->
-  <section id="research">
-    <h2>Research</h2>
-    <p>Research focuses on innovative algorithms leveraging machine learning and physics-based modeling for hyperspectral and multidimensional imaging data.</p>
-  </section>
+    <section id="research">
+      <h2>Research</h2>
+      <p>Research focuses on developing fast, physics-informed, and machine learning–based algorithms for efficient reconstruction, analysis, and interpretation of hyperspectral and multidimensional imaging data.</p>
+    </section>
 
-  <!-- Publications Section -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <h3>Journal Articles</h3>
-    <ul>
-      <li>“Fast Hyperspectral Neutron Tomography,” IEEE Trans. Comput. Imaging, 2025</li>
-      <li>“A machine learning decision criterion for reducing scan time...,” Scientific Reports, 2024</li>
-      <li>“Deep Neural Network for Visual Stimulus-Based Reaction Time Estimation...,” Sensors, 2020</li>
-    </ul>
-    <h3>Conference Papers</h3>
-    <ul>
-      <li>“MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction,” ICIP, 2025</li>
-      <li>“Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography,” ICIP, 2023</li>
-      <li>“An Edge Alignment-based Orientation Selection Method for Neutron Tomography,” ICASSP, 2023</li>
-      <li>“Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral Neutron Tomography,” Asilomar, 2024</li>
-      <li>“Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction,” WCNR, 2024</li>
-      <li>“Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography using Artificial Intelligence,” WCNR, 2024</li>
-      <li>“3D CNN to Estimate Reaction Time from Multi-Channel EEG,” EMBC, 2021</li>
-      <li>“A Generalized Model to Estimate Reaction Time Corresponding to Visual Stimulus Using Single-Trial EEG,” EMBC, 2020</li>
-    </ul>
-    <h3>Patent</h3>
-    <ul>
-      <li>“Biometric identification using electroencephalogram (EEG) signals,” US Patent App. 17/402,049, filed 2022</li>
-    </ul>
-  </section>
+    <section id="publications">
+      <h2>Publications</h2>
+      <h3>Journal Articles</h3>
+      <ul>
+        <li>“Fast Hyperspectral Neutron Tomography,” <em>IEEE Trans. Comput. Imaging</em>, 2025</li>
+        <li>“A machine learning decision criterion for reducing scan time...,” <em>Scientific Reports</em>, 2024</li>
+        <li>“Deep Neural Network for Visual Stimulus-Based Reaction Time Estimation...,” <em>Sensors</em>, 2020</li>
+      </ul>
+      <h3>Conference Papers</h3>
+      <ul>
+        <li>“MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction,” ICIP, 2025</li>
+        <li>“Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography,” ICIP, 2023</li>
+        <li>“An Edge Alignment-based Orientation Selection Method for Neutron Tomography,” ICASSP, 2023</li>
+        <li>“Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral Neutron Tomography,” Asilomar, 2024</li>
+        <li>“Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction,” WCNR, 2024</li>
+        <li>“Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography using Artificial Intelligence,” WCNR, 2024</li>
+        <li>“3D CNN to Estimate Reaction Time from Multi-Channel EEG,” EMBC, 2021</li>
+        <li>“A Generalized Model to Estimate Reaction Time Corresponding to Visual Stimulus Using Single-Trial EEG,” EMBC, 2020</li>
+      </ul>
+      <h3>Patent</h3>
+      <ul>
+        <li>“Biometric identification using electroencephalogram (EEG) signals,” US Patent App. 17/402,049, filed 2022</li>
+      </ul>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</li>
-      <li>Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</li>
-      <li>Physics-Informed Unsupervised GAN for Strain Tensor Reconstruction</li>
-      <li>Automated Object Removal from Images using Segmentation and Inpainting</li>
-      <li>Camera-Based Android App for Image Enhancement</li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</li>
+        <li>Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</li>
+        <li>Physics-Informed Unsupervised GAN for Strain Tensor Reconstruction</li>
+        <li>Automated Object Removal from Images using Segmentation and Inpainting</li>
+        <li>Camera-Based Android App for Image Enhancement</li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Mohammad Samin Nur Chowdhury
   </footer>
+
+  <script>
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function activateNav() {
+      let index = sections.length;
+
+      while(--index && window.scrollY + 110 < sections[index].offsetTop) {} // 110px for header + padding
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLinks[index].classList.add('active');
+    }
+
+    activateNav();
+    window.addEventListener('scroll', activateNav);
+  </script>
 </body>
 </html>
