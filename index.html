@@ -7,7 +7,6 @@
   <title>Mohammad Samin Nur Chowdhury</title>
   
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   
   <style>
     html {
@@ -71,7 +70,6 @@
       position: relative;
       margin-top: 70px;
       min-height: 40vh;
-      padding-bottom: 60px;
     }
 
     .cover img.cover-img {
@@ -82,8 +80,9 @@
 
     .profile-pic {
       position: absolute;
-      bottom: -50px;
       left: 5%; /* aligned with section headings */
+      bottom: 0;
+      transform: translateY(50%); /* center aligns with bottom of cover */
       border-radius: 50%;
       border: 3px solid #d2b48c;
       object-fit: cover;
@@ -94,7 +93,7 @@
     .profile-text {
       position: relative;
       margin-left: 5%; /* aligned with section headings */
-      margin-top: 60px;
+      margin-top: 85px;
       display: flex;
       flex-direction: column;
       gap: 0.2em;
@@ -129,7 +128,7 @@
       width: 95%;
       margin: 5em auto 2.5em auto;
       padding: 0 1em;
-      scroll-margin-top: 90px; /* aligns section headers below fixed header */
+      scroll-margin-top: 90px;
     }
 
     h2 {
@@ -171,17 +170,8 @@
       nav { flex-wrap: wrap; }
       nav a { margin: 0.625em; }
       .cover img.cover-img { height: 28vh; }
-      .profile-pic {
-        bottom: -35px;   /* intersects cover better */
-        left: 5%;        /* aligns with section headings */
-        width: 120px;    /* smaller size */
-        height: 120px;
-      }
-      .profile-text {
-        margin-left: 5%;  /* aligns with section headings */
-        text-align: left;
-        margin-top: 50px;
-      }
+      .profile-pic { width: 120px; height: 120px; bottom: 0; transform: translateY(50%); }
+      .profile-text { left: 5%; transform: none; text-align: left; margin-top: 70px; }
       .profile-text .contacts { justify-content: flex-start; }
       .about-content { flex-direction: column; align-items: flex-start; margin-top: 40px; }
     }
@@ -303,3 +293,4 @@
   </footer>
 </body>
 </html>
+
