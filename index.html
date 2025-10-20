@@ -126,6 +126,28 @@
       text-decoration: none;
     }
 
+    .view-btn {
+      background-color: #d2b48c;
+      color: black;
+      border: none;
+      padding: 3px 8px;           /* smaller buttons */
+      border-radius: 5px;
+      font-size: 0.85em;          /* slightly smaller text */
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    .view-btn:hover {
+      background-color: #c0a070;
+      transform: scale(1.05);
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: #d2b48c;
+    }
+
     main section {
       width: 95%;
       margin: 5em auto 2.5em auto;
@@ -256,28 +278,98 @@
 
     <section id="publications">
       <h2>Publications</h2>
+
+      <p>
+        <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" class="view-btn">
+          Google Scholar
+        </a>
+      </p>
+
       <h3>Journal Articles</h3>
       <ul>
-        <li>“Fast Hyperspectral Neutron Tomography,” <em>IEEE Trans. Comput. Imaging</em>, 2025</li>
-        <li>“A machine learning decision criterion for reducing scan time...,” <em>Scientific Reports</em>, 2024</li>
-        <li>“Deep Neural Network for Visual Stimulus-Based Reaction Time Estimation...,” <em>Sensors</em>, 2020</li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan, H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman,
+          “<strong>Fast Hyperspectral Neutron Tomography</strong>,”
+          <em>IEEE Transactions on Computational Imaging</em>, vol. 11, pp. 663–677, 2025.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10807389" target="_blank">View Article</a>
+        </li>
+        <li>
+          S. Tang, S. V. Venkatakrishnan, <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, M. Gober, H. Z. Bilheux, and C. A. Bouman,
+          “<strong>A machine learning decision criterion for reducing scan time for hyperspectral neutron computed tomography systems</strong>,”
+          <em>Scientific Reports</em>, vol. 14, no. 1, 15171, 2024.
+          <a class="view-btn" href="https://www.nature.com/articles/s41598-024-60608-5" target="_blank">View Article</a>
+        </li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais, G. A. Brewer, and D. W. Bliss,
+          “<strong>Deep neural network for visual stimulus-based reaction time estimation using the periodogram of single-trial EEG</strong>,”
+          <em>Sensors</em>, vol. 20, no. 21, 6090, 2020.
+          <a class="view-btn" href="https://www.mdpi.com/1424-8220/20/21/6090" target="_blank">View Article</a>
+        </li>
       </ul>
+
       <h3>Conference Papers</h3>
       <ul>
-        <li>“MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction,” ICIP, 2025</li>
-        <li>“Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography,” ICIP, 2023</li>
-        <li>“An Edge Alignment-based Orientation Selection Method for Neutron Tomography,” ICASSP, 2023</li>
-        <li>“Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral Neutron Tomography,” Asilomar, 2024</li>
-        <li>“Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction,” WCNR, 2024</li>
-        <li>“Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography using Artificial Intelligence,” WCNR, 2024</li>
-        <li>“3D CNN to Estimate Reaction Time from Multi-Channel EEG,” EMBC, 2021</li>
-        <li>“A Generalized Model to Estimate Reaction Time Corresponding to Visual Stimulus Using Single-Trial EEG,” EMBC, 2020</li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, S. Tang, S. V. Venkatakrishnan, H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman,
+          “<strong>MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction</strong>,”
+          in <em>Proc. IEEE Int. Conf. Image Process. (ICIP)</em>, 2025.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10827038" target="_blank">View Paper</a>
+        </li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan, H. Z. Bilheux, and C. A. Bouman,
+          “<strong>Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography</strong>,”
+          in <em>Proc. IEEE Int. Conf. Image Process. (ICIP)</em>, pp. 1280–1284, 2023.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10222276" target="_blank">View Paper</a>
+        </li>
+        <li>
+          D. Yang, S. Tang, S. V. Venkatakrishnan, <span class="highlight">M. S. N. Chowdhury</span>, Y. Zhang, and C. A. Bouman,
+          “<strong>An edge alignment-based orientation selection method for neutron tomography</strong>,”
+          in <em>Proc. IEEE Int. Conf. Acoust., Speech Signal Process. (ICASSP)</em>, 2023.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10096946" target="_blank">View Paper</a>
+        </li>
+        <li>
+          D. Yang, <span class="highlight">M. S. N. Chowdhury</span>, S. Tang, S. V. Venkatakrishnan, H. Z. Bilheux, and C. A. Bouman,
+          “<strong>Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral Neutron Tomography</strong>,”
+          in <em>Proc. Asilomar Conf. Signals, Syst., Comput.</em>, pp. 664–668, 2024.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10619143" target="_blank">View Paper</a>
+        </li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan, A. W. Needham, H. Z. Bilheux, and C. A. Bouman,
+          “<strong>Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction</strong>,”
+          in <em>Proc. 12th World Conf. Neutron Radiography (WCNR-12)</em>, 2024.
+          <a class="view-btn" href="https://wcnr12.org/" target="_blank">View Paper</a>
+        </li>
+        <li>
+          S. Tang, <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. V. Venkatakrishnan, K. D. Anderson, and C. A. Bouman,
+          “<strong>Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography using Artificial Intelligence</strong>,”
+          in <em>Proc. 12th World Conf. Neutron Radiography (WCNR-12)</em>, 2024.
+          <a class="view-btn" href="https://wcnr12.org/" target="_blank">View Paper</a>
+        </li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais, G. Brewer, and D. W. Bliss,
+          “<strong>3D CNN to Estimate Reaction Time from Multi-Channel EEG</strong>,”
+          in <em>Proc. IEEE Eng. Med. Biol. Conf. (EMBC)</em>, 2021.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/9629820" target="_blank">View Paper</a>
+        </li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais, G. Brewer, and D. W. Bliss,
+          “<strong>A generalized model to estimate reaction time corresponding to visual stimulus using single-trial EEG</strong>,”
+          in <em>Proc. IEEE Eng. Med. Biol. Conf. (EMBC)</em>, 2020.
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/9175502" target="_blank">View Paper</a>
+        </li>
       </ul>
+
       <h3>Patent</h3>
       <ul>
-        <li>“Biometric identification using electroencephalogram (EEG) signals,” US Patent App. 17/402,049, filed 2022</li>
+        <li>
+          <span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, D. W. Bliss, G. Brewer, C. Blais, and M. Robison,
+          “<strong>Biometric identification using electroencephalogram (EEG) signals</strong>,”
+          U.S. Patent Application 17/402,049, filed 2022.
+          <a class="view-btn" href="https://patents.google.com/patent/US20220034567A1" target="_blank">View Patent</a>
+        </li>
       </ul>
     </section>
+
 
     <section id="projects">
       <h2>Projects</h2>
