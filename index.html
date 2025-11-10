@@ -66,6 +66,17 @@
       width: 100%;
     }
 
+    a.prof-link {
+      color: #d2b48c;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a.prof-link:hover {
+      color: #ebc98f; /* slightly brighter gold on hover */
+      text-decoration: underline;
+    }
+
     /* Cover + profile */
     .cover {
       position: relative;
@@ -331,11 +342,11 @@
   <div class="about-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; align-items:stretch;">
 
     <!-- LEFT COLUMN: Summary, Expertise, Education -->
-    <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+    <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
       <p>
         Hello! I’m a Ph.D. candidate in Electrical Engineering at Purdue University, advised by
-        <a href="https://engineering.purdue.edu/~bouman/" target="_blank" style="color:#d2b48c;">Dr. Charles A. Bouman</a> and
-        <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" style="color:#d2b48c;">Dr. Gregory T. Buzzard</a>. I’m passionate
+        <a href="https://engineering.purdue.edu/~bouman/" target="_blank" class="prof-link">Dr. Charles A. Bouman</a> and
+        <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" class="prof-link">Dr. Gregory T. Buzzard</a>. I’m passionate
         about solving challenging inverse problems in imaging. My current research focuses on developing physics-informed
         AI algorithms that are transforming hyperspectral neutron imaging at Oak Ridge National Laboratory and other
         leading research facilities. Prior to Purdue, I worked at Microsoft as an Image Quality Engineer, improving
@@ -362,32 +373,32 @@
       <ul class="education" style="list-style:none; padding:0; margin:0;">
         <li style="margin-bottom:15px;">
           <strong>Ph.D. in Electrical Engineering</strong><br>
-          <div style="display:flex; align-items:center; margin-left:35px;">
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
             <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
             <em>Purdue University, West Lafayette, Indiana, USA | 2026</em>
           </div>
-          <div style="margin-left:35px;">
+          <div style="margin-left:35px; color:#ccc;">
             Advisors:
-            <a href="https://engineering.purdue.edu/~bouman/" target="_blank" style="color:#d2b48c;">Dr. Charles A. Bouman</a> &
-            <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" style="color:#d2b48c;">Dr. Gregory T. Buzzard</a>
+            <a href="https://engineering.purdue.edu/~bouman/" target="_blank" class="prof-link">Dr. Charles A. Bouman</a> &
+            <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" class="prof-link">Dr. Gregory T. Buzzard</a>
           </div>
         </li>
 
         <li style="margin-bottom:15px;">
           <strong>M.S. in Electrical Engineering</strong><br>
-          <div style="display:flex; align-items:center; margin-left:35px;">
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
             <img src="logos/asu_logo.png" alt="Arizona State University Logo" style="width:40px; height:auto; margin-right:10px;">
             <em>Arizona State University, Tempe, Arizona, USA | 2019</em>
           </div>
-          <div style="margin-left:35px;">
+          <div style="margin-left:35px; color:#ccc;">
             Advisor:
-            <a href="https://search.asu.edu/profile/2001925/" target="_blank" style="color:#d2b48c;">Dr. Daniel W. Bliss</a>
+            <a href="https://search.asu.edu/profile/2001925/" target="_blank" class="prof-link">Dr. Daniel W. Bliss</a>
           </div>
         </li>
 
         <li>
           <strong>B.S. in Electrical Engineering</strong><br>
-          <div style="display:flex; align-items:center; margin-left:35px;">
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
             <img src="logos/buet_logo.png" alt="BUET Logo" style="width:40px; height:auto; margin-right:10px;">
             <em>Bangladesh University of Engineering and Technology, Bangladesh | 2016 </em>
           </div>
@@ -396,7 +407,7 @@
     </div>
 
     <!-- RIGHT COLUMN: Technical Skills -->
-    <div style="flex:0 1 auto; display:flex; flex-direction:column; background-color:#151515; padding:15px; border-radius:8px; color:#fff; justify-content: space-between;">
+    <div style="flex:0 1 auto; display:flex; flex-direction:column; background-color:#121212; padding:15px; border-radius:8px; color:#fff; justify-content: space-between;">
       <h4>Programming Languages</h4>
       <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px;  margin-bottom:50px;">
         <div class="about-skill-item" style="text-align:center;">
@@ -486,7 +497,7 @@
 
 <section id="experience">
   <h2>Experience</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul>
     <li><strong>Research Assistant, Purdue University</strong> | May 2021 – Present<br>Developed algorithms integrating physics-based models with AI for hyperspectral neutron computed tomography and material decomposition.</li>
     <li><strong>Teaching Assistant, Purdue University</strong> | Jan 2021 – May 2021<br>Led Python-based lab sessions for Digital Signal Processing.</li>
@@ -499,7 +510,7 @@
 
 <section id="awards">
   <h2>Awards</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul class="awards" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
       <li style="flex:1 1 300px; max-width:400px; text-align:center;">
           Best Student Paper Award – <strong>IEEE ICIP 2023</strong><br>
@@ -525,14 +536,14 @@
 
 <section id="research">
   <h2>Research</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <p>Research focuses on developing fast, physics-informed, and machine learning–based algorithms for efficient reconstruction, analysis, and interpretation of hyperspectral and multidimensional imaging data.</p>
   </div>
 </section>
 
 <section id="publications">
   <h2>Publications</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <p>
     <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" class="view-btn" target="_blank">
       Google Scholar
@@ -648,7 +659,7 @@
 
 <section id="projects">
   <h2>Projects</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#151515; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul>
     <li>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</li>
     <li>Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</li>
