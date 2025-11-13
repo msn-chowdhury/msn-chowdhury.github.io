@@ -171,10 +171,45 @@
     }
 
     /* Icons for list items */
-    #about ul.education li::before { content: '\f19d'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
-    #about ul.awards li::before { content: '\f091'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
-    #experience li::before { content: '\f0b1'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
-    #research li::before, #projects li::before, #about ul li::before { content: '\f058'; font-family: 'Font Awesome 5 Free'; font-weight: 900; color: #d2b48c; display: inline-block; width: 1.2em; margin-right: 0.5em; }
+    #about ul.education li::before {
+    content: '\f19d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em; }
+
+    #experience li::before {
+    content: '\f0b1';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em; }
+
+    #research li::before {
+    content: '\f002'; /* Font Awesome magnifying glass */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em;
+    }
+
+    /* Internal bullets (nested lists) */
+    #research ul li ul li::before,
+    .internal-bullet::before {
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    font-size: 0.6em;
+    margin-right: 0.5em;
+    }
 
     footer {
       text-align: center;
@@ -514,16 +549,15 @@
             <span>BEST</span>
           </div>
         </div>
-
+      </div>
     </div>
-
   </div>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
   <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
-  <ul class="experience" style="list-style:none; padding:0; margin:0;">
+  <ul style="list-style:none; padding:0; margin:0;">
   <li style="margin-bottom:20px;">
     <strong>Research Assistant</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
@@ -584,6 +618,7 @@
       • Conducted MATLAB and GNU Radio-based lab sessions for <em>Communication Systems</em>.
     </div>
   </li>
+  </ul>
   </div>
 </section>
 
@@ -616,10 +651,98 @@
 
 <section id="research">
   <h2>Research</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
-  <p>Research focuses on developing fast, physics-informed, and machine learning–based algorithms for efficient reconstruction, analysis, and interpretation of hyperspectral and multidimensional imaging data.</p>
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
+    <ul class="education" style="list-style:none; padding:0; margin:0;">
+
+      <!-- 1st Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">Fast Algorithms for Hyperspectral Neutron Imaging</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Purdue University & Oak Ridge National Laboratory</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          We developed a family of three fast algorithms for hyperspectral data processing, unified under a dehydration–rehydration framework.<br><br>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-left:60px; margin-bottom:15px;"><strong style="color:#fff;">Dehydration:</strong> Performs unsupervised, machine learning–based dimensionality reduction, representing large hyperspectral datasets in a compact subspace—no prior training required.</li>
+            <li style="margin-left:60px; margin-bottom:30px;"><strong style="color:#fff;">Rehydration:</strong> Restores data from the subspace to the hyperspectral domain, preserving both structural and spectral fidelity.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">Fast Hyperspectral Denoising (FHD):</strong> Achieves over 30 dB SNR improvement while preserving spectral and spatial details. Sequential dehydration and rehydration suppress spectral noise during subspace fitting and restore clean, high-SNR hyperspectral data.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">Fast Hyperspectral Reconstruction (FHR):</strong> Performs over 1,000 3D reconstructions in under an hour—more than 10× faster than traditional approaches—while reducing noise and improving image quality. This algorithm sequentially performs dehydration, tomographic reconstruction, and rehydration. This work received the Best Presentation Award at the 12th World Conference on Neutron Radiography (WCNR).</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides fast and accurate volumetric material separation and material spectra estimation through sequential dehydration, tomographic reconstruction, and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at IEEE ICIP 2023, and the extended version was published in IEEE Transactions on Computational Imaging (2025).</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- 2nd Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg Edge Data</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Purdue University & Oak Ridge National Laboratory</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          We achieved over 99% accurate 2D strain tensor reconstruction by enforcing physics-based constraints. We developed two algorithms for the purpose.<br><br>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">MACE-Based:</strong> A multi-agent consensus equilibrium (MACE) framework integrating a sinogram-domain forward model for strain, model-based iterative reconstruction (MBIR), and physics-based constraints to iteratively recover accurate 3D strain tensors. This work was presented at IEEE ICIP 2025.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">GAN-Based:</strong> A generative adversarial network (GAN), where the generator reconstructs 2D strain tensors and the discriminator enforces structural realism guided by physics-based constraints. We plan to present this work at an upcoming conference.</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- 3rd Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">Intelligent Data Acquisition for Hyperspectral Neutron CT</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Purdue University & Oak Ridge National Laboratory</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">Adaptive Orientation Selection:</strong> A novel approach, optimizing sample orientation selection based on edge alignment, reducing required measurements for high-quality reconstructions. This work significantly outperformed conventional methods and was recognized with the Top 3% Contribution Award at IEEE ICASSP 2023.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">Machine Learning–Driven Data Acquisition:</strong> A machine learning–based decision criterion that reduced data collection time by 5× at ORNL compared to previous procedures. This work was published in Scientific Reports by Nature (2024).</li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- 4th Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Purdue University & Oak Ridge National Laboratory</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          Developed a multi-pose fusion algorithm that combines tomographic projection data from multiple poses of the sample to enhance reconstruction quality. This work was presented at the 2024 Asilomar Conference on Signals, Systems, and Computers.
+        </div>
+      </li>
+
+      <!-- 5th Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Purdue University & Oak Ridge National Laboratory</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          Introduced a new training framework for AI-based CT reconstruction that generates high-quality reconstructions from extremely sparse time-of-flight (ToF) scans. This work was presented at the 12th World Conference on Neutron Radiography (WCNR).
+        </div>
+      </li>
+
+      <!-- 6th Sub-Section -->
+      <li style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.4em;">EEG-Based Reaction Time Estimation</strong><br>
+        <div style="display:flex; align-items:center; margin-left:35px; margin-bottom:20px; color:#ccc;">
+          <em>Arizona State University</em>
+        </div>
+        <div style="margin-left:35px; color:#ccc;">
+          Developed a series of machine learning and deep learning algorithms to predict human reaction times from multi-channel EEG signals.<br><br>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">ML Models:</strong> Achieved 74% correlation in regression and 79% accuracy in binary classification.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">DNN + Random Forest:</strong> Combined deep neural networks with random forests to reach 94% accuracy and 80% correlation.</li>
+            <li style="margin-bottom:15px;"><strong style="color:#fff;">3D-CNN:</strong> Designed a 3D convolutional neural network (3D-CNN) leveraging spatial channel relationships to achieve 83% correlation, the highest in this study.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ul>
   </div>
 </section>
+
 
 <section id="publications">
   <h2>Publications</h2>
