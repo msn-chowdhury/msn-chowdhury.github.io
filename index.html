@@ -6,7 +6,7 @@
   <meta name="description" content="Ph.D. Candidate in Electrical Engineering at Purdue University." />
   <title>Mohammad Samin Nur Chowdhury</title>
 
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
 
   <style>
     html {
@@ -144,17 +144,6 @@
       scroll-margin-top: 90px;
     }
 
-    /* REUSABLE CONTENT BOX CLASS */
-    .content-box {
-      background-color: #121212;
-      padding: 15px;
-      border-radius: 8px;
-      color: #fff;
-      height: 100%;
-      overflow: auto; /* Useful for research/publications section */
-    }
-
-
     h2 {
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       border-bottom: 2px solid #d2b48c;
@@ -183,16 +172,16 @@
 
     /* Icons for list items */
     #about ul.education li::before {
-    content: '\f19d'; /* university icon */
-    font-family: 'Font Awesome 6 Free';
+    content: '\f19d';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900; color: #d2b48c;
     display: inline-block;
     width: 1.2em;
     margin-right: 0.5em; }
 
     #experience li::before {
-    content: '\f0b1'; /* briefcase icon */
-    font-family: 'Font Awesome 6 Free';
+    content: '\f0b1';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #d2b48c;
     display: inline-block;
@@ -201,8 +190,8 @@
 
     #experience ul li ul li::before,
     .internal-bullet::before {
-    content: '\f111'; /* circle dot icon */
-    font-family: 'Font Awesome 6 Free';
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #d2b48c;
     display: inline-block;
@@ -211,8 +200,8 @@
     margin-right: 0.5em;}
 
     #awards li::before {
-    content: '\f091'; /* trophy icon */
-    font-family: 'Font Awesome 6 Free';
+    content: '\f091';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #d2b48c;
     display: inline-block;
@@ -221,8 +210,8 @@
 
     #research ul li ul li::before,
     .internal-bullet::before {
-    content: '\f111'; /* circle dot icon */
-    font-family: 'Font Awesome 6 Free';
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: #d2b48c;
     display: inline-block;
@@ -381,7 +370,6 @@
     #publications .view-btn:hover {
       background-color: #d2b48c;
       color: #000;
-      transform: scale(1.03); /* Added suggested visual feedback */
     }
 
     .project-item .with-line {
@@ -429,7 +417,8 @@
   <h2>About</h2>
   <div class="about-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; align-items:stretch;">
 
-    <div class="content-box" style="flex:2 1 600px; min-width:300px;">
+    <!-- LEFT COLUMN: Summary, Expertise, Education -->
+    <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
       <p>
         Hello! I’m a Ph.D. candidate in Electrical Engineering at Purdue University, advised by
         <a href="https://engineering.purdue.edu/~bouman/" target="_blank" class="dir-link">Dr. Charles A. Bouman</a> and
@@ -493,11 +482,13 @@
       </ul>
     </div>
 
-    <div class="content-box" style="flex:0 1 auto; display:flex; flex-direction:column; justify-content: space-between;">
+    <!-- RIGHT COLUMN: Technical Skills -->
+    <div style="flex:0 1 auto; display:flex; flex-direction:column; background-color:#121212; padding:15px; border-radius:8px; color:#fff; justify-content: space-between;">
 
       <h4>Programming Languages</h4>
       <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:50px;">
 
+        <!-- First pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://www.python.org/" target="_blank">
@@ -513,6 +504,7 @@
           </div>
         </div>
 
+        <!-- Second pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://www.c-language.org/" target="_blank">
@@ -532,6 +524,7 @@
       <h4>ML & CV Libraries</h4>
       <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:50px;">
 
+        <!-- First pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://pytorch.org/" target="_blank">
@@ -547,6 +540,7 @@
           </div>
         </div>
 
+        <!-- Second pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://scikit-learn.org/" target="_blank">
@@ -567,6 +561,7 @@
       <h4>Software Dev. Contributions</h4>
       <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:50px;">
 
+        <!-- First pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://mbirjax.readthedocs.io/en/latest/" target="_blank">
@@ -582,6 +577,7 @@
           </div>
         </div>
 
+        <!-- Second pair -->
         <div style="display:flex; gap:10px; justify-content:center;">
           <div class="about-skill-item" style="flex:1; text-align:center;">
             <a href="https://svmbir.readthedocs.io/en/latest/index.html" target="_blank">
@@ -601,7 +597,7 @@
 
 <section id="experience">
   <h2>Experience</h2>
-  <div class="content-box" style="min-width:300px;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul style="list-style:none; padding:0; margin:0;">
   <li style="margin-bottom:20px;">
     <strong style="color:#fff; font-size:1.3em;">Research Assistant</strong><br>
@@ -679,7 +675,7 @@
 
 <section id="awards">
   <h2>Awards</h2>
-  <div class="content-box" style="min-width:300px;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul class="awards" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
       <li style="flex:1 1 300px; max-width:400px; text-align:center;">
           <strong>Best Student Paper Award<br>IEEE ICIP 2023</strong><br>
@@ -705,9 +701,10 @@
 
 <section id="research">
   <h2>Research</h2>
-  <div class="content-box" style="min-width:300px;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
     <ul class="education" style="list-style:none; padding:0; margin:0;">
 
+      <!-- 1st Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron Imaging</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -744,6 +741,7 @@
         </div>
       </li>
 
+      <!-- 2nd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg
           Edge Data</strong>
@@ -768,6 +766,7 @@
         </div>
       </li>
 
+      <!-- 3rd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Intelligent Data Acquisition for Hyperspectral Neutron CT</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -790,6 +789,7 @@
         </div>
       </li>
 
+      <!-- 4th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -805,6 +805,7 @@
         </div>
       </li>
 
+      <!-- 5th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -820,6 +821,7 @@
         </div>
       </li>
 
+      <!-- 6th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Reaction Time Estimation from Multi-Channel EEG</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -854,7 +856,7 @@
 
 <section id="publications">
   <h2>Publications</h2>
-  <div class="content-box" style="min-width:300px;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
     <p>
       <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" class="view-btn" target="_blank">
         Google Scholar
@@ -864,6 +866,7 @@
     <h3>Journal Articles</h3>
     <ul class="pub-list">
 
+      <!-- 1 -->
       <li class="pub-item">
         <span class="pub-index">[1]</span>
         <div class="pub-content">
@@ -876,6 +879,7 @@
         </div>
       </li>
 
+      <!-- 2 -->
       <li class="pub-item">
         <span class="pub-index">[2]</span>
         <div class="pub-content">
@@ -889,6 +893,7 @@
         </div>
       </li>
 
+      <!-- 3 -->
       <li class="pub-item">
         <span class="pub-index">[3]</span>
         <div class="pub-content">
@@ -906,6 +911,7 @@
     <h3>Conference Papers</h3>
     <ul class="pub-list">
 
+      <!-- 4 -->
       <li class="pub-item">
         <span class="pub-index">[4]</span>
         <div class="pub-content">
@@ -918,6 +924,7 @@
         </div>
       </li>
 
+      <!-- 5 -->
       <li class="pub-item">
         <span class="pub-index">[5]</span>
         <div class="pub-content">
@@ -930,6 +937,7 @@
         </div>
       </li>
 
+      <!-- 6 -->
       <li class="pub-item">
         <span class="pub-index">[6]</span>
         <div class="pub-content">
@@ -942,6 +950,7 @@
         </div>
       </li>
 
+      <!-- 7 -->
       <li class="pub-item">
         <span class="pub-index">[7]</span>
         <div class="pub-content">
@@ -955,6 +964,7 @@
         </div>
       </li>
 
+      <!-- 8 -->
       <li class="pub-item">
         <span class="pub-index">[8]</span>
         <div class="pub-content">
@@ -967,6 +977,7 @@
         </div>
       </li>
 
+      <!-- 9 -->
       <li class="pub-item">
         <span class="pub-index">[9]</span>
         <div class="pub-content">
@@ -980,6 +991,7 @@
         </div>
       </li>
 
+      <!-- 10 -->
       <li class="pub-item">
         <span class="pub-index">[10]</span>
         <div class="pub-content">
@@ -992,6 +1004,7 @@
         </div>
       </li>
 
+      <!-- 11 -->
       <li class="pub-item">
         <span class="pub-index">[11]</span>
         <div class="pub-content">
@@ -1008,6 +1021,7 @@
 
     <h3>Patent</h3>
     <ul class="pub-list">
+      <!-- 12 -->
       <li class="pub-item">
         <span class="pub-index">[12]</span>
         <div class="pub-content">
@@ -1025,9 +1039,10 @@
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="content-box" style="min-width:300px;">
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
     <ul style="list-style:none; padding:0; margin:0;">
 
+      <!-- 1st Project -->
       <li class="project-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
@@ -1036,6 +1051,7 @@
         </div>
       </li>
 
+      <!-- 2nd Project -->
       <li class="project-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
@@ -1044,6 +1060,7 @@
         </div>
       </li>
 
+      <!-- 3rd Project -->
       <li class="project-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Automated Object Removal from Images Using Segmentation and Inpainting</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
@@ -1052,6 +1069,7 @@
         </div>
       </li>
 
+      <!-- 4th Project -->
       <li class="project-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.3em;">Camera-Based Android App for Image Enhancement</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
