@@ -197,15 +197,6 @@
     width: 1.2em;
     margin-right: 0.5em; }
 
-    #research li::before {
-    content: '\f00e'; /* Font Awesome magnifying glass */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: #d2b48c;
-    display: inline-block;
-    width: 1.2em;
-    margin-right: 0.5em;}
-
     /* Internal bullets (nested lists) */
     #research ul li ul li::before,
     .internal-bullet::before {
@@ -216,15 +207,6 @@
     display: inline-block;
     width: 1.2em;
     font-size: 0.6em;
-    margin-right: 0.5em;}
-
-    #projects-list li::before {
-    content: '\f12e'; /* same as experience icon */
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: #d2b48c;
-    display: inline-block;
-    width: 1.2em;
     margin-right: 0.5em;}
 
     footer {
@@ -309,8 +291,8 @@
 
     .research-item .with-line {
       border-left: 2px solid #d2b48c;
-      padding-left: 15px;
-      margin-left: 18px;   /* left spacing */
+      padding-left: 12px;
+      margin-left: 12px;   /* left spacing */
       margin-top: 12px;    /* gap below title */
     }
 
@@ -378,6 +360,13 @@
     #publications .view-btn:hover {
       background-color: #d2b48c;
       color: #000;
+    }
+
+    .project-item .with-line {
+      border-left: 2px solid #d2b48c;
+      padding-left: 12px;
+      margin-left: 12px;   /* left spacing */
+      margin-top: 12px;    /* gap below title */
     }
 
   </style>
@@ -668,23 +657,23 @@
   <h2>Awards</h2>
   <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul class="awards" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-      <li style="flex:1 1 380px; max-width:460px; text-align:center;">
+      <li style="flex:1 1 300px; max-width:400px; text-align:center;">
           <strong>Best Student Paper Award<br>IEEE ICIP 2023</strong><br>
           <img src="awards/award_1.jpg" alt="ICIP 2023 Certificate" style="width:100%; max-width:350px; height:65%; margin-top:10px; border-radius:8px;">
           <br>
-          <em>"Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography"</em>
+          <em style="font-size:0.9em;">"Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography"</em>
       </li>
-      <li style="flex:1 1 380px; max-width:460px; text-align:center;">
+      <li style="flex:1 1 300px; max-width:400px; text-align:center;">
           <strong>Best Presentation Award<br>WCNR 2024</strong><br>
           <img src="awards/award_2.jpg" alt="WCNR 2024 Certificate" style="width:100%; max-width:350px; height:65%; margin-top:10px; border-radius:8px;">
           <br>
-          <em>"Fast Hyperspectral Reconstruction for Neutron Tomography Using Subspace Extraction"</em>
+          <em style="font-size:0.9em;">"Fast Hyperspectral Reconstruction for Neutron Tomography Using Subspace Extraction"</em>
       </li>
-      <li style="flex:1 1 380px; max-width:460px; text-align:center;">
+      <li style="flex:1 1 300px; max-width:400px; text-align:center;">
           <strong>Top 3% Paper Recognition<br>IEEE ICASSP 2023</strong><br>
           <img src="awards/award_3.jpg" alt="ICASSP 2023 Certificate" style="width:100%; max-width:350px; height:65%; margin-top:10px; border-radius:8px;">
           <br>
-          <em>"An Edge Alignment-based Orientation Selection Method for Neutron Tomography"</em>
+          <em style="font-size:0.9em;">"An Edge Alignment-based Orientation Selection Method for Neutron Tomography"</em>
       </li>
   </ul>
   </div>
@@ -697,7 +686,7 @@
 
       <!-- 1st Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron Imaging</strong>
+        <strong style="color:#fff; font-size:1.3em;">Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron Imaging</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -734,7 +723,7 @@
 
       <!-- 2nd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg
+        <strong style="color:#fff; font-size:1.3em;">Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg
           Edge Data</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
@@ -759,7 +748,7 @@
 
       <!-- 3rd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">Intelligent Data Acquisition for Hyperspectral Neutron CT</strong>
+        <strong style="color:#fff; font-size:1.3em;">Intelligent Data Acquisition for Hyperspectral Neutron CT</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -782,7 +771,7 @@
 
       <!-- 4th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong>
+        <strong style="color:#fff; font-size:1.3em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -798,7 +787,7 @@
 
       <!-- 5th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong>
+        <strong style="color:#fff; font-size:1.3em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -814,7 +803,7 @@
 
       <!-- 6th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.4em;">Reaction Time Estimation from Multi-Channel EEG</strong>
+        <strong style="color:#fff; font-size:1.3em;">Reaction Time Estimation from Multi-Channel EEG</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Arizona State University</em>
@@ -1030,33 +1019,48 @@
 
 <section id="projects">
   <h2>Projects</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
-    <ul id="projects-list" style="list-style:none; padding:0; margin:0;">
-      <li style="margin-bottom:15px;">
-        <strong>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</strong><br>
-        Developed a pipeline that performs MBIR on downsampled sinograms, applies transformer-based super-resolution for
-        upsampling the reconstruction, and refines the result with limited MBIR iterations on the original data.
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
+    <ul style="list-style:none; padding:0; margin:0;">
+
+      <!-- 1st Project -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.3em;">Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
+          Developed a pipeline that performs MBIR on downsampled sinograms, applies transformer-based super-resolution for
+          upsampling the reconstruction, and refines the result with limited MBIR iterations on the original data.
+        </div>
       </li>
 
-      <li style="margin-bottom:15px;">
-        <strong>Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</strong><br>
-        Developed a hyperspectral denoising framework that sequentially performs NMF-based spectral dimensionality reduction,
-        diffusion model-based denoising in the reduced space, and spectral dimensionality retrieval.
+      <!-- 2nd Project -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.3em;">Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
+          Developed a hyperspectral denoising framework that sequentially performs NMF-based spectral dimensionality reduction,
+          diffusion model-based denoising in the reduced space, and spectral dimensionality retrieval.
+        </div>
       </li>
 
-      <li style="margin-bottom:15px;">
-        <strong>Automated Object Removal from Images Using Segmentation and Inpainting</strong><br>
-        Combined encoder-decoder semantic segmentation with contextual attention-based generative inpainting for object
-        localization and seamless removal.
+      <!-- 3rd Project -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.3em;">Automated Object Removal from Images Using Segmentation and Inpainting</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
+          Combined encoder-decoder semantic segmentation with contextual attention-based generative inpainting for object
+          localization and seamless removal.
+        </div>
       </li>
 
-      <li style="margin-bottom:15px;">
-        <strong>Camera-Based Android App for Image Enhancement</strong><br>
-        Developed an Android app for real-time auto noise reduction, edge sharpening, and color/tone correction.
+      <!-- 4th Project -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.3em;">Camera-Based Android App for Image Enhancement</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
+          Developed an Android app for real-time auto noise reduction, edge sharpening, and color/tone correction.
+        </div>
       </li>
+
     </ul>
   </div>
 </section>
+
 
 </main>
 
