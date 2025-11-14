@@ -188,6 +188,17 @@
     width: 1.2em;
     margin-right: 0.5em; }
 
+    #experience ul li ul li::before,
+    .internal-bullet::before {
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    font-size: 0.6em;
+    margin-right: 0.5em;}
+
     #awards li::before {
     content: '\f091';
     font-family: 'Font Awesome 5 Free';
@@ -197,7 +208,6 @@
     width: 1.2em;
     margin-right: 0.5em; }
 
-    /* Internal bullets (nested lists) */
     #research ul li ul li::before,
     .internal-bullet::before {
     content: '\f111';
@@ -590,63 +600,73 @@
   <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
   <ul style="list-style:none; padding:0; margin:0;">
   <li style="margin-bottom:20px;">
-    <strong>Research Assistant</strong><br>
+    <strong style="color:#fff; font-size:1.3em;">Research Assistant</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
       <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
       <em>Purdue University, West Lafayette, Indiana, USA | May 2021 – Present</em>
     </div>
     <div style="margin-left:35px; color:#ccc;">
-      •	Developed physics-informed AI algorithms for hyperspectral neutron imaging and applications.<br>
-      •	Built Python package for fast denoising, reconstruction, and decomposition of large-scale 4D hyperspectral data.<br>
-      •	Designed Python package for accurate strain tensor estimation from neutron Bragg edge measurements.<br>
-      •	Collaborated with Oak Ridge National Laboratory to optimize neutron imaging pipelines & processing workflows.
+      <ul>
+        <li>Developed physics-informed AI algorithms for hyperspectral neutron imaging and applications.</li>
+        <li>Built Python package for fast denoising, reconstruction, and decomposition of large-scale 4D hyperspectral data.</li>
+        <li>Designed Python package for accurate strain tensor estimation from neutron Bragg edge measurements.</li>
+        <li>Collaborated with Oak Ridge National Laboratory to optimize neutron imaging pipelines & processing workflows.</li>
+      </ul>
     </div>
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Teaching Assistant</strong><br>
+    <strong style="color:#fff; font-size:1.3em;">Teaching Assistant</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
       <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
       <em>Purdue University, West Lafayette, Indiana, USA | Jan 2021 – May 2021</em>
     </div>
     <div style="margin-left:35px; color:#ccc;">
-      • Led Python-based lab sessions for <em>Digital Signal Processing with Applications</em>.
+      <ul>
+        <li>Led Python-based lab sessions for <em>Digital Signal Processing with Applications</em>.</li>
+      </ul>
     </div>
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>Image Quality Engineer</strong><br>
+    <strong style="color:#fff; font-size:1.3em;">Image Quality Engineer</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
       <img src="logos/microsoft_logo.png" alt="Microsoft Logo" style="width:40px; height:auto; margin-right:10px;">
       <em>Microsoft Corporation, Redmond, Washington, USA | Jul 2020 – Dec 2020</em>
     </div>
     <div style="margin-left:35px; color:#ccc;">
-      •	Optimized camera ISP and image quality across diverse lighting conditions.<br>
-      •	Developed deep learning models for intelligent image enhancement.<br>
-      •	Collaborated with hardware and software teams to improve the end-to-end imaging pipeline.
+      <ul>
+        <li>Optimized camera ISP and image quality across diverse lighting conditions.</li>
+        <li>Developed deep learning models for intelligent image enhancement.</li>
+        <li>Collaborated with hardware and software teams to improve the end-to-end imaging pipeline.</li>
+      </ul>
     </div>
   </li>
 
   <li style="margin-bottom:20px;">
-    <strong>AI/ML Research Intern</strong><br>
+    <strong style="color:#fff; font-size:1.3em;">AI/ML Research Intern</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
       <img src="logos/unarlabs_logo.png" alt="UNAR Labs Logo" style="width:40px; height:auto; margin-right:10px;">
       <em>UNAR Labs, Portland, Maine, USA | Summer 2020</em>
     </div>
     <div style="margin-left:35px; color:#ccc;">
-      • Designed AI-driven computer vision algorithms for assistive technologies.<br>
-      • Focused on real-time image analysis, optical character recognition (OCR), and pattern recognition.
+      <ul>
+        <li>Designed AI-driven computer vision algorithms for assistive technologies.</li>
+        <li>Focused on real-time image analysis, optical character recognition (OCR), and pattern recognition.</li>
+      </ul>
     </div>
   </li>
 
   <li>
-    <strong>Teaching Assistant</strong><br>
+    <strong style="color:#fff; font-size:1.3em;">Teaching Assistant</strong><br>
     <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
       <img src="logos/asu_logo.png" alt="Arizona State University Logo" style="width:40px; height:auto; margin-right:10px;">
       <em>Arizona State University, Tempe, Arizona, USA | Aug 2018 – May 2019</em>
     </div>
     <div style="margin-left:35px; color:#ccc;">
-      • Conducted MATLAB and GNU Radio-based lab sessions for <em>Communication Systems</em>.
+      <ul>
+        <li>Conducted MATLAB and GNU Radio-based lab sessions for <em>Communication Systems</em>.</li>
+      </ul>
     </div>
   </li>
   </ul>
