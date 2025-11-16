@@ -296,6 +296,47 @@
       color: #f0f0f0;
     }
 
+    .site-images {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .site-images figure {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+      position: relative; /* for overlay title */
+    }
+
+    .site-images img {
+      width: 100%;
+      max-width: 350px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: transform 1s ease, z-index 0.3s ease;
+      z-index: 1;
+    }
+
+    .site-images img:hover {
+      /* transform is overridden by JS */
+      z-index: 10;
+      position: relative;
+    }
+
+    .site-images figcaption {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    .site-images .fig-title {
+      display: block;
+      font-weight: bold;
+      font-size: 1em;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
     .research-item {
       position: relative;
     }
@@ -305,30 +346,6 @@
       padding-left: 12px;
       margin-left: 12px;   /* left spacing */
       margin-top: 12px;    /* gap below title */
-    }
-
-    .research-images img {
-      width: 100%;
-      max-width: 400px;
-      margin: 10px 0;
-      display: inline-block;
-    }
-
-    .research-images {
-      text-align: center;
-      margin: 15px 0;
-    }
-
-    .research-images figure {
-      display: inline-block;
-      margin: 10px;
-      text-align: center;
-    }
-
-    .research-images figcaption {
-      font-size: 0.9em;
-      color: #ccc;
-      margin-top: 5px;
     }
 
     /* Scoped styles for the Publications section */
@@ -611,27 +628,37 @@
     <!-- BOTTOM COLUMN: Awards -->
     <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
       <h3>Awards</h3>
-      <ul class="awards" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
-          <li style="flex:1 1 300px; max-width:400px; text-align:center;">
-              <strong>Best Student Paper Award<br>IEEE ICIP 2023</strong><br>
-              <img src="awards/award_1.jpg" alt="ICIP 2023 Certificate" style="width:70%; max-width:350px; margin-top:10px; border-radius:8px;">
-              <br>
-              <em style="font-size:0.9em;">"Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography"</em>
-          </li>
-          <li style="flex:1 1 300px; max-width:400px; text-align:center;">
-              <strong>Best Presentation Award<br>WCNR 2024</strong><br>
-              <img src="awards/award_2.jpg" alt="WCNR 2024 Certificate" style="width:70%; max-width:350px; margin-top:10px; border-radius:8px;">
-              <br>
-              <em style="font-size:0.9em;">"Fast Hyperspectral Reconstruction for Neutron Tomography Using Subspace Extraction"</em>
-          </li>
-          <li style="flex:1 1 300px; max-width:400px; text-align:center;">
-              <strong>Top 3% Paper Recognition<br>IEEE ICASSP 2023</strong><br>
-              <img src="awards/award_3.jpg" alt="ICASSP 2023 Certificate" style="width:70%; max-width:350px; margin-top:10px; border-radius:8px;">
-              <br>
-              <em style="font-size:0.9em;">"An Edge Alignment-based Orientation Selection Method for Neutron Tomography"</em>
-          </li>
+      <ul class="site-images" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <span class="fig-title"><ul class="awards"><li>Best Student Paper Award<br>IEEE ICIP 2023</ul></span>
+            <img src="awards/award_1.jpg" alt="ICIP 2023 Certificate">
+            <figcaption>
+              <em>"Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography"</em>
+            </figcaption>
+          </figure>
+        </li>
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <span class="fig-title"><ul class="awards"><li>Best Presentation Award<br>WCNR 2024</ul></span>
+            <img src="awards/award_2.jpg" alt="WCNR 2024 Certificate">
+            <figcaption>
+              <em>"Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction"</em>
+            </figcaption>
+          </figure>
+        </li>
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <span class="fig-title"><ul class="awards"><li>Top 3% Paper Recognition<br>IEEE ICASSP 2023</ul></span>
+            <img src="awards/award_3.jpg" alt="ICASSP 2023 Certificate">
+            <figcaption>
+              <em>"An Edge Alignment-Based Orientation Selection Method for Neutron Tomography"</em>
+            </figcaption>
+          </figure>
+        </li>
       </ul>
     </div>
+
 
   </div>
 </section>
@@ -736,7 +763,7 @@
                 while preserving spectral and spatial details. Sequential dehydration and rehydration suppress spectral
                 noise during subspace fitting and restore clean, high-SNR hyperspectral data.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="awards/award_1.jpg" alt="FHD 1">
                   <figcaption>FHD step 1</figcaption>
@@ -759,7 +786,7 @@
                 Presentation Award at the 12th World Conference on Neutron Radiography (WCNR)
                 <a href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/fhr_1.jpg" alt="FHR 1">
                   <figcaption>FHR reconstruction step 1</figcaption>
@@ -784,7 +811,7 @@
                 and the extended version was published in IEEE Transactions on Computational Imaging (2025)
                 <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/fmd_1.jpg" alt="FMD 1">
                   <figcaption>FMD material decomposition step 1</figcaption>
@@ -822,7 +849,7 @@
                 constraints to iteratively recover accurate 3D strain tensors. This work was presented at IEEE ICIP 2025
                 <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/mace_1.jpg" alt="MACE 1">
                   <figcaption>MACE reconstruction step 1</figcaption>
@@ -842,7 +869,7 @@
                 reconstructs 2D strain tensors and the discriminator enforces structural realism guided by physics-based
                 constraints. We plan to present this work at an upcoming conference.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/gan_1.jpg" alt="GAN 1">
                   <figcaption>GAN reconstruction step 1</figcaption>
@@ -878,7 +905,7 @@
                 based on edge alignment, reducing required measurements. Top 3% Contribution Award at IEEE ICASSP 2023
                 <a href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/adaptive_orientation_1.jpg" alt="Adaptive Orientation 1">
                   <figcaption>Orientation selection step 1</figcaption>
@@ -898,7 +925,7 @@
                 time by 5× at ORNL. Published in Scientific Reports by Nature (2024)
                 <a href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/ml_decision_1.jpg" alt="ML Decision 1">
                   <figcaption>ML criterion step 1</figcaption>
@@ -936,7 +963,7 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 Achieved 60% faster reconstruction while retaining reconstruction quality.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/mbir_vt_speed_1.jpg" alt="MBIR-VT Speed 1">
                   <figcaption>Speed comparison step 1</figcaption>
@@ -972,7 +999,7 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 Improved reconstruction quality by 25%.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/mbir_poisson_improve_1.jpg" alt="MBIR Poisson Improve 1">
                   <figcaption>Improvement comparison step 1</figcaption>
@@ -1004,7 +1031,7 @@
             Designed a multi-pose fusion algorithm that combines tomographic projection data from multiple poses of the
             sample to enhance reconstruction quality. Presented at 2024 Asilomar Conference on Signals, Systems, and Computers
             <a href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank" class="dir-link">[paper]</a>.
-            <div class="research-images">
+            <div class="site-images">
               <figure>
                 <img src="images/multi_pose_1.jpg" alt="Multi-Pose 1">
                 <figcaption>Pose fusion step 1</figcaption>
@@ -1034,7 +1061,7 @@
             from extremely sparse time-of-flight (ToF) scans. Presented at 12th World Conference on Neutron Radiography
             (WCNR)
             <a href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
-            <div class="research-images">
+            <div class="site-images">
               <figure>
                 <img src="images/ai_tof_1.jpg" alt="AI ToF 1">
                 <figcaption>AI ToF reconstruction step 1</figcaption>
@@ -1068,7 +1095,7 @@
                 in binary classification. Presented at 2020 IEEE EMBC
                 <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/ml_models_1.jpg" alt="ML Models 1">
                   <figcaption>ML model step 1</figcaption>
@@ -1088,7 +1115,7 @@
                 to reach 94% accuracy and 80% correlation. Published in Sensors (2020)
                 <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="images/dnn_rf_1.jpg" alt="DNN+RF 1">
                   <figcaption>DNN+RF step 1</figcaption>
@@ -1108,7 +1135,7 @@
                 spatial channel relationships to achieve 83% correlation. Presented at 2021 IEEE EMBC
                 <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
-              <div class="research-images">
+              <div class="site-images">
                 <figure>
                   <img src="awards/award_1.jpg" alt="3D-CNN 1">
                   <figcaption>3D-CNN step 1</figcaption>
@@ -1316,5 +1343,49 @@
 <footer>
   &copy; 2025 Mohammad Samin Nur Chowdhury
 </footer>
+
+<!-- Hover zoom script -->
+<script>
+const images = document.querySelectorAll('.site-images img');
+
+images.forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    const rect = img.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    const scale = 2; // match CSS hover scale
+    const zoomedWidth = rect.width * scale;
+    const zoomedHeight = rect.height * scale;
+
+    let translateX = 0;
+    let translateY = 0;
+
+    // Check horizontal overflow
+    const leftOverflow = rect.left + zoomedWidth - vw;
+    const rightOverflow = rect.left - (zoomedWidth - rect.width);
+    if (leftOverflow > 0) translateX -= leftOverflow + 5; // keep margin
+    if (rightOverflow < 0) translateX -= rightOverflow - 5;
+
+    // Check vertical overflow
+    const bottomOverflow = rect.top + zoomedHeight - vh;
+    const topOverflow = rect.top - (zoomedHeight - rect.height);
+    if (bottomOverflow > 0) translateY -= bottomOverflow + 5;
+    if (topOverflow < 0) translateY -= topOverflow - 5;
+
+    // Apply transform with translation + scale
+    img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    img.style.zIndex = 10;
+    img.style.position = 'relative'; // keeps it above siblings
+  });
+
+  img.addEventListener('mouseleave', () => {
+    img.style.transform = 'scale(1)';
+    img.style.zIndex = 1;
+    img.style.position = 'relative';
+  });
+});
+</script>
+
 </body>
 </html>
