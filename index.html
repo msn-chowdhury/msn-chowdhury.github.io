@@ -313,13 +313,13 @@
       max-width: 350px;
       margin: 10px 0;
       border-radius: 8px;
-      transition: transform 1s ease, z-index 0.3s ease;
+      transition: transform 1s ease, z-index 0.1s ease;
       z-index: 1;
     }
 
     .site-images img:hover {
       /* transform is overridden by JS */
-      z-index: 10;
+      z-index: 1000;
       position: relative;
     }
 
@@ -1380,9 +1380,14 @@ images.forEach(img => {
   });
 
   img.addEventListener('mouseleave', () => {
+    img.style.transition = 'none'; // instant zoom-out
     img.style.transform = 'scale(1)';
     img.style.zIndex = 1;
     img.style.position = 'relative';
+
+    // Force reflow to re-enable transition for next hover
+    void img.offsetWidth;
+    img.style.transition = 'transform 1s ease, z-index 0.1s ease';
   });
 });
 </script>
