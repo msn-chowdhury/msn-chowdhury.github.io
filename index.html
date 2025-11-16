@@ -153,6 +153,7 @@
 
     h3 {
       font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-bottom:10px;
     }
 
     h4 {
@@ -389,7 +390,6 @@
       <a href="#experience">Experience</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
     </nav>
   </header>
 
@@ -630,10 +630,9 @@
     </div>
     <div style="margin-left:35px; color:#ccc;">
       <ul>
-        <li>Developed physics-informed AI algorithms for hyperspectral neutron imaging and applications.</li>
-        <li>Built Python package for fast denoising, reconstruction, and decomposition of large-scale 4D hyperspectral data.</li>
-        <li>Designed Python package for accurate strain tensor estimation from neutron Bragg edge measurements.</li>
-        <li>Collaborated with Oak Ridge National Laboratory to optimize neutron imaging pipelines & processing workflows.</li>
+        <li>Developed physics-informed AI algorithms for hyperspectral neutron imaging at Oak Ridge National Laboratory.</li>
+        <li>Built a scalable Python package for fast 4D hyperspectral denoising, reconstruction, and material decomposition.</li>
+        <li>Designed a robust Python package for accurate strain tensor estimation from neutron Bragg edge measurements.</li>
       </ul>
     </div>
   </li>
@@ -659,9 +658,10 @@
     </div>
     <div style="margin-left:35px; color:#ccc;">
       <ul>
-        <li>Optimized camera ISP and image quality across diverse lighting conditions.</li>
-        <li>Developed deep learning models for intelligent image enhancement.</li>
-        <li>Collaborated with hardware and software teams to improve the end-to-end imaging pipeline.</li>
+        <li>Developed camera ISP pipelines for Surface devices, optimized for diverse lighting conditions.</li>
+        <li>Enhanced 3A performance (auto exposure, white balance, focus), low-light noise reduction, and color consistency.</li>
+        <li>Developed AI models for skin-tone correction, local gamma refinement, and overexposed sky reconstruction.</li>
+        <li>Collaborated with cross-functional hardware and software teams to optimize sensor-to-display pipeline.</li>
       </ul>
     </div>
   </li>
@@ -674,21 +674,8 @@
     </div>
     <div style="margin-left:35px; color:#ccc;">
       <ul>
-        <li>Designed AI-driven computer vision algorithms for assistive technologies.</li>
-        <li>Focused on real-time image analysis, optical character recognition (OCR), and pattern recognition.</li>
-      </ul>
-    </div>
-  </li>
-
-  <li>
-    <strong style="color:#fff; font-size:1.2em;">Teaching Assistant</strong><br>
-    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
-      <img src="logos/asu_logo.png" alt="Arizona State University Logo" style="width:40px; height:auto; margin-right:10px;">
-      <em>Arizona State University, Tempe, Arizona, USA | Aug 2018 – May 2019</em>
-    </div>
-    <div style="margin-left:35px; color:#ccc;">
-      <ul>
-        <li>Conducted MATLAB and GNU Radio-based lab sessions for <em>Communication Systems</em>.</li>
+        <li>Designed AI algorithms to convert scientific documents into accessible formats for visually impaired users.</li>
+        <li>Implemented real-time image analysis, optical character recognition (OCR), and pattern recognition techniques.</li>
       </ul>
     </div>
   </li>
@@ -709,11 +696,11 @@
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
-            We developed a family of three fast algorithms for hyperspectral data processing, unified under a dehydration–rehydration
-            framework.<br><br>
+            Developed a family of three fast algorithms that dramatically improve hyperspectral data processing and analysis.
+            All three are unified under a dehydration–rehydration framework:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:40px; margin-bottom:15px;"><strong style="color:#fff;">Dehydration:</strong> Performs
-                unsupervised, machine learning–based dimensionality reduction, representing large hyperspectral datasets
+                unsupervised machine learning–based dimensionality reduction, representing large hyperspectral datasets
                 in a compact subspace—no prior training required.</li>
               <li style="margin-left:40px; margin-bottom:30px;"><strong style="color:#fff;">Rehydration:</strong> Restores
                 data from the subspace to the hyperspectral domain, preserving both structural and spectral fidelity.</li>
@@ -725,14 +712,14 @@
                 reducing noise and improving image quality. This algorithm sequentially performs dehydration, tomographic
                 reconstruction, and rehydration. This work received the Best Presentation Award at the 12th World Conference
                 on Neutron Radiography (WCNR)
-                <a href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank" class="dir-link">[8]</a>.</li>
+                <a href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
               <li style="margin-bottom:15px;"><strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides
                 fast and accurate volumetric material separation and material spectra estimation through sequential dehydration,
                 tomographic reconstruction, and subspace-to-material transformation. An earlier version earned the Best
                 Student Paper Award at IEEE ICIP 2023
-                <a href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank" class="dir-link">[5]</a>,
+                <a href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank" class="dir-link">[paper]</a>,
                 and the extended version was published in IEEE Transactions on Computational Imaging (2025)
-                <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[1]</a>.</li>
+                <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
             </ul>
           </div>
         </div>
@@ -747,16 +734,16 @@
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
-            We achieved over 99% accurate 2D strain tensor reconstruction by enforcing physics-based constraints. We developed
-            two algorithms for the purpose.<br><br>
+            Achieved over 99% accurate 2D strain tensor reconstruction by enforcing physics-based constraints. Developed
+            two algorithms for the purpose:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">MACE Model:</strong> A multi-agent
                 consensus equilibrium (MACE) framework integrating a sinogram-domain forward model for strain, model-based
                 iterative reconstruction (MBIR), and physics-based constraints to iteratively recover accurate 3D strain
                 tensors. This work was presented at IEEE ICIP 2025
-                <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[4]</a>.</li>
+                <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">GAN Model:</strong> A generative
-                adversarial network (GAN), where the generator reconstructs 2D strain tensors and the discriminator enforces
+                adversarial network (GAN) where the generator reconstructs 2D strain tensors and the discriminator enforces
                 structural realism guided by physics-based constraints. We plan to present this work at an upcoming conference.</li>
             </ul>
           </div>
@@ -771,22 +758,59 @@
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
+            Introduced AI-powered methods to optimize data acquisition for hyperspectral neutron CT, helping to conserve
+            valuable time and energy on neutron beamlines:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">Adaptive Orientation Selection:</strong>
                 A novel approach that optimizes sample orientation selection based on edge alignment, reducing required measurements
                 for high-quality reconstructions. This work significantly outperformed conventional golden ratio–based approaches
                 and was recognized with the Top 3% Contribution Award at IEEE ICASSP 2023
-                <a href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank" class="dir-link">[6]</a>.</li>
+                <a href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">Machine Learning Decision Criterion:</strong>
                 A machine learning–driven data acquisition technique that reduced hyperspectral data collection time by 5×
                 at ORNL compared to standard procedures. This work was published in Scientific Reports by Nature (2024)
-                <a href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[2]</a>.</li>
+                <a href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
             </ul>
           </div>
         </div>
       </li>
 
       <!-- 4th Sub-Section -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.2em;">Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="margin-left:0; margin-bottom:15px;">Built a pipeline that performs MBIR reconstruction on downsampled
+                data, transformer-based super-resolution, and final refinement using limited MBIR on upsampled data.</li>
+              <li style="margin-left:0; margin-bottom:15px;">Achieved 60% faster reconstruction while retaining reconstruction
+                quality.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- 5th Sub-Section -->
+      <li class="project-item" style="margin-bottom:60px;">
+        <strong style="color:#fff; font-size:1.2em;">Improved MBIR with a Poisson Diffusion Prior</strong>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="margin-left:0; margin-bottom:15px;">Developed a reconstruction framework that performs MBIR with
+                Poisson diffusion-based regularization prior.</li>
+              <li style="margin-left:0; margin-bottom:15px;">Improved reconstruction quality by 25%.</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!-- 6th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.2em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -794,15 +818,15 @@
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
-            Developed a multi-pose fusion algorithm that combines tomographic projection data from multiple poses of the
+            Designed a multi-pose fusion algorithm that combines tomographic projection data from multiple poses of the
             sample to enhance reconstruction quality. This work was presented at the 2024 Asilomar Conference on Signals,
             Systems, and Computers
-            <a href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank" class="dir-link">[7]</a>.
+            <a href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank" class="dir-link">[paper]</a>.
           </div>
         </div>
       </li>
 
-      <!-- 5th Sub-Section -->
+      <!-- 7th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.2em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -813,12 +837,12 @@
             Introduced a new training framework for AI-based CT reconstruction that generates high-quality reconstructions
             from extremely sparse time-of-flight (ToF) scans. This work was presented at the 12th World Conference on Neutron
             Radiography (WCNR)
-            <a href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank" class="dir-link">[9]</a>.
+            <a href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
           </div>
         </div>
       </li>
 
-      <!-- 6th Sub-Section -->
+      <!-- 8th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
         <strong style="color:#fff; font-size:1.2em;">Reaction Time Estimation from Multi-Channel EEG</strong>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
@@ -827,21 +851,21 @@
           </div>
           <div style="color:#ccc;">
             Developed a series of machine learning and deep learning algorithms to predict human reaction times from multi-channel
-            EEG signals.<br><br>
+            EEG signals:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">ML Models:</strong> Achieved 74%
                 correlation in regression and 79% accuracy in binary classification. This work was presented at the 2020
                 International Conference of the IEEE Engineering in Medicine & Biology Society (EMBC)
-                <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[11]</a>.</li>
+                <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">DNN + Random Forest:</strong> Combined
                 deep neural networks with random forests to reach 94% accuracy and 80% correlation. This work was published
                 in Sensors (2020)
-                <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[3]</a>.</li>
+                <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
               <li style="margin-left:0; margin-bottom:15px;"><strong style="color:#fff;">3D-CNN:</strong> Designed a 3D
                 convolutional neural network (3D-CNN) leveraging spatial channel relationships to achieve 83% correlation,
                 the highest in this study. This work was presented at the 2021 International Conference of the IEEE Engineering
                 in Medicine & Biology Society (EMBC)
-                <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[10]</a>.</li>
+                <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.</li>
             </ul>
           </div>
         </div>
@@ -1033,51 +1057,6 @@
     </ul>
   </div>
 </section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
-    <ul style="list-style:none; padding:0; margin:0;">
-
-      <!-- 1st Project -->
-      <li class="project-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</strong>
-        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
-          Developed a pipeline that performs MBIR on downsampled sinograms, applies transformer-based super-resolution for
-          upsampling the reconstruction, and refines the result with limited MBIR iterations on the original data.
-        </div>
-      </li>
-
-      <!-- 2nd Project -->
-      <li class="project-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Hyperspectral Image Denoising via Non-Negative Matrix Factorization (NMF) and Diffusion Model</strong>
-        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
-          Developed a hyperspectral denoising framework that sequentially performs NMF-based spectral dimensionality reduction,
-          diffusion model-based denoising in the reduced space, and spectral dimensionality retrieval.
-        </div>
-      </li>
-
-      <!-- 3rd Project -->
-      <li class="project-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Automated Object Removal from Images Using Segmentation and Inpainting</strong>
-        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
-          Combined encoder-decoder semantic segmentation with contextual attention-based generative inpainting for object
-          localization and seamless removal.
-        </div>
-      </li>
-
-      <!-- 4th Project -->
-      <li class="project-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Camera-Based Android App for Image Enhancement</strong>
-        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px; color:#ccc;">
-          Developed an Android app for real-time auto noise reduction, edge sharpening, and color/tone correction.
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</section>
-
 
 </main>
 
