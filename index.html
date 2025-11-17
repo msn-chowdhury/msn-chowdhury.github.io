@@ -1351,34 +1351,42 @@ const images = document.querySelectorAll('.site-images img');
 images.forEach(img => {
   img.addEventListener('mouseenter', () => {
     const rect = img.getBoundingClientRect();
+    const container = img.closest('.site-images').getBoundingClientRect();
     const vw = window.innerWidth;
     const vh = window.innerHeight;
+    const cw = container.width;
+    const ch = container.height;
 
     const maxScale = 2;
-    const scaleX = vw / rect.width;
-    const scaleY = vh / rect.height;
+    const scaleX = cw / rect.width;
+    const scaleY = (vh - 20) / rect.height;
     const scale = Math.min(maxScale, scaleX, scaleY);
-    const zoomedWidth = rect.width * scale;
-    const zoomedHeight = rect.height * scale;
+    const zoomedWidth = rect.width * Math.max(scale, 1);
+    const zoomedHeight = rect.height * Math.max(scale, 1);
 
     let translateX = 0;
     let translateY = 0;
 
+    const extraW = (zoomedWidth - rect.width) / 2;
+    const extraH = (zoomedHeight - rect.height) / 2;
+
     // Check horizontal overflow
-    const leftOverflow = rect.left + zoomedWidth - vw;
-    const rightOverflow = rect.left - (zoomedWidth - rect.width);
-    if (leftOverflow > 0) translateX -= leftOverflow + 5; // keep margin
-    if (rightOverflow < 0) translateX -= rightOverflow - 5;
+    const leftOverflow  = extraW - rect.left + container.left;
+    const rightOverflow = (rect.right + extraW) - (container.left + cw);
+
+    if (leftOverflow > 0) translateX += leftOverflow;
+    if (rightOverflow > 0) translateX -= rightOverflow;
 
     // Check vertical overflow
-    const bottomOverflow = rect.top + zoomedHeight - vh;
-    const topOverflow = rect.top - (zoomedHeight - rect.height);
-    if (bottomOverflow > 0) translateY -= bottomOverflow + 5;
-    if (topOverflow < 0) translateY -= topOverflow - 5;
+    const topOverflow = extraH - rect.top;
+    const bottomOverflow = (rect.bottom + extraH) - vh;
+
+    if (topOverflow > 0) translateY += topOverflow + 10;
+    if (bottomOverflow > 0) translateY -= bottomOverflow + 10;
 
     // Apply transform with translation + scale
     img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    img.style.zIndex = 10;
+    img.style.zIndex = 10000;
     img.style.position = 'relative'; // keeps it above siblings
   });
 
