@@ -1354,7 +1354,10 @@ images.forEach(img => {
     const vw = window.innerWidth;
     const vh = window.innerHeight;
 
-    const scale = 2; // match CSS hover scale
+    const maxScale = 2;
+    const scaleX = vw / rect.width;
+    const scaleY = vh / rect.height;
+    const scale = Math.min(maxScale, scaleX, scaleY);
     const zoomedWidth = rect.width * scale;
     const zoomedHeight = rect.height * scale;
 
