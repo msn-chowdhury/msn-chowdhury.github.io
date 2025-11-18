@@ -319,7 +319,7 @@
 
     .site-images img:hover {
       /* transform is overridden by JS */
-      z-index: 1000;
+      z-index: 9999999;
       position: relative;
     }
 
@@ -1386,7 +1386,7 @@ images.forEach(img => {
 
     // Apply transform with translation + scale
     img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    img.style.zIndex = 10000;
+    img.style.zIndex = 9999999;
     img.style.position = 'relative'; // keeps it above siblings
   });
 
