@@ -305,7 +305,8 @@
       display: inline-block;
       margin: 10px;
       text-align: center;
-      position: relative; /* for overlay title */
+      vertical-align: top;  /* ensures figures line up nicely */
+      max-width: 350px;     /* match the image max width */
     }
 
     .site-images img {
@@ -324,9 +325,13 @@
     }
 
     .site-images figcaption {
+      display: block;       /* ensures it behaves like a block element */
+      word-wrap: break-word;/* wrap long text */
+      white-space: normal;  /* allow multiple lines */
       font-size: 0.9em;
       color: #ccc;
       margin-top: 5px;
+      text-align: center;   /* optional, center text under image */
     }
 
     .site-images .fig-title {
@@ -735,15 +740,28 @@
 
       <!-- 1st Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron
-          Imaging</strong>
+        <h3>Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron Imaging</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
-            Developed a family of three fast algorithms that dramatically improve hyperspectral data processing and analysis.
-            All three are unified under a dehydration–rehydration framework:<br><br>
+            Neutron imaging is a non-destructive technique for analyzing the internal structure of a sample and provides
+            information complementary to X-ray imaging. Hyperspectral neutron imaging extends this capability by capturing
+            hundreds to thousands of wavelength-resolved neutron radiographs, enabling detailed spectral characterization
+            of the sample’s constituent materials.
+            <div class="site-images">
+              <figure>
+                <img src="research/research_1 (1).jpg" alt="FHD 1">
+                <figcaption>X-ray Vs. Neutron Imaging</figcaption>
+              </figure>
+              <figure>
+                <img src="research/research_1 (2).jpg" alt="FHD 2">
+                <figcaption>Hyperspectral Neutron Data Collection</figcaption>
+              </figure>
+            </div>
+            We developed a family of three fast algorithms that dramatically improve hyperspectral neutron data processing
+            and analysis. All three are unified under a dehydration–rehydration framework:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <!-- Dehydration -->
               <li style="margin-left:40px; margin-bottom:15px;">
@@ -765,16 +783,16 @@
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="awards/award_1.jpg" alt="FHD 1">
-                  <figcaption>FHD step 1</figcaption>
+                  <img src="research/research_1 (3).jpg" alt="FHD 1">
+                  <figcaption>FHD Algorithm</figcaption>
                 </figure>
                 <figure>
-                  <img src="awards/award_1.jpg" alt="FHD 2">
-                  <figcaption>FHD step 2</figcaption>
+                  <img src="research/research_1 (4).jpg" alt="FHD 2">
+                  <figcaption>Noisy Vs. Denoised: Spatial</figcaption>
                 </figure>
                 <figure>
-                  <img src="awards/award_1.jpg" alt="FHD 3">
-                  <figcaption>FHD step 3</figcaption>
+                  <img src="research/research_1 (5).jpg" alt="FHD 3">
+                  <figcaption>Noisy Vs. Denoised: Spectral</figcaption>
                 </figure>
               </div>
 
@@ -788,41 +806,37 @@
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="images/fhr_1.jpg" alt="FHR 1">
-                  <figcaption>FHR reconstruction step 1</figcaption>
+                  <img src="research/research_1 (6).jpg" alt="FHR 1">
+                  <figcaption>FHR Algorithm</figcaption>
                 </figure>
                 <figure>
-                  <img src="images/fhr_2.jpg" alt="FHR 2">
-                  <figcaption>FHR reconstruction step 2</figcaption>
-                </figure>
-                <figure>
-                  <img src="images/fhr_3.jpg" alt="FHR 3">
-                  <figcaption>FHR reconstruction step 3</figcaption>
+                  <img src="research/research_1 (7).jpg" alt="FHR 2">
+                  <figcaption>Traditional Reconstruction Vs. FHR</figcaption>
                 </figure>
               </div>
 
               <!-- FMD -->
               <li style="margin-bottom:15px;">
-                <strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides fast and accurate volumetric
-                material separation and material spectra estimation through sequential dehydration, tomographic reconstruction,
-                and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at IEEE ICIP
-                2023
+                <strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides 10× faster volumetric material
+                separation and 25+ dB SNR improvement through sequential implementation of dehydration, tomographic reconstruction,
+                and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at IEEE
+                ICIP 2023
                 <a href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank" class="dir-link">[paper]</a>,
                 and the extended version was published in IEEE Transactions on Computational Imaging (2025)
                 <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="images/fmd_1.jpg" alt="FMD 1">
-                  <figcaption>FMD material decomposition step 1</figcaption>
+                  <img src="research/research_1 (8).jpg" alt="FMD 1">
+                  <figcaption>FMD Algorithm</figcaption>
                 </figure>
                 <figure>
-                  <img src="images/fmd_2.jpg" alt="FMD 2">
-                  <figcaption>FMD material decomposition step 2</figcaption>
+                  <img src="research/research_1 (9).jpg" alt="FMD 2">
+                  <figcaption>FMD Material Separation</figcaption>
                 </figure>
                 <figure>
-                  <img src="images/fmd_3.jpg" alt="FMD 3">
-                  <figcaption>FMD material decomposition step 3</figcaption>
+                  <img src="research/research_1 (10).jpg" alt="FMD 3">
+                  <figcaption>FMD Spectra Estimation</figcaption>
                 </figure>
               </div>
 
@@ -833,8 +847,7 @@
 
       <!-- 2nd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg
-          Edge Data</strong>
+        <h3>Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg Edge Data</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -891,7 +904,7 @@
 
       <!-- 3rd Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Intelligent Data Acquisition for Hyperspectral Neutron CT</strong>
+        <h3>Intelligent Data Acquisition for Hyperspectral Neutron CT</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -948,8 +961,7 @@
 
       <!-- 4th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using
-          Vision Transformer</strong>
+        <h3>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -986,7 +998,7 @@
 
       <!-- 5th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Improved MBIR with a Poisson Diffusion Prior</strong>
+        <h3>Improved MBIR with a Poisson Diffusion Prior</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -1022,7 +1034,7 @@
 
       <!-- 6th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Multi-Pose Fusion for Hyperspectral Neutron Tomography</strong>
+        <h3>Multi-Pose Fusion for Hyperspectral Neutron Tomography</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -1051,7 +1063,7 @@
 
       <!-- 7th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</strong>
+        <h3>AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Purdue University & Oak Ridge National Laboratory</em>
@@ -1081,68 +1093,72 @@
 
       <!-- 8th Sub-Section -->
       <li class="research-item" style="margin-bottom:60px;">
-        <strong style="color:#fff; font-size:1.2em;">Reaction Time Estimation from Multi-Channel EEG</strong>
+        <h3>Reaction Time Estimation from Multi-Channel EEG</h3>
         <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
           <div style="color:#ccc; margin-bottom:20px;">
             <em>Arizona State University</em>
           </div>
           <div style="color:#ccc;">
-            Developed machine learning and deep learning algorithms to predict human reaction times from multi-channel EEG
-            signals:<br><br>
+            Human behavioral responses during perceptual decision-making are closely related to the brain’s electrical activity,
+            as measured by electroencephalograms (EEG). Accurately modeling this relationship and predicting human responses
+            directly from EEG offers powerful opportunities in psychology, clinical neuroscience, and brain–computer interface
+            (BCI) development.<br><br>
+
+            We developed a series of machine learning and deep learning algorithms to predict human response times from
+            multi-channel EEG signals:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;">
-                <strong style="color:#fff;">ML Models:</strong> Achieved 74% correlation in regression and 79% accuracy
-                in binary classification. Presented at 2020 IEEE EMBC
+                <strong style="color:#fff;">ML Models:</strong> Implemented multiple machine learning models for both classification
+                and regression tasks, achieving 79% accuracy in binary classification and 74% correlation in regression.
+                This work was presented at 2020 IEEE EMBC
                 <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="images/ml_models_1.jpg" alt="ML Models 1">
-                  <figcaption>ML model step 1</figcaption>
+                  <img src="research/research_8 (1).jpg" alt="ML Models 1">
+                  <figcaption>Regression Performance Comparison Among Machine Learning Models</figcaption>
                 </figure>
                 <figure>
-                  <img src="images/ml_models_2.jpg" alt="ML Models 2">
-                  <figcaption>ML model step 2</figcaption>
-                </figure>
-                <figure>
-                  <img src="images/ml_models_3.jpg" alt="ML Models 3">
-                  <figcaption>ML model step 3</figcaption>
+                  <img src="research/research_8 (2).jpg" alt="ML Models 2">
+                  <figcaption>Actual Vs. Predicted Response Time for Random Forest Model</figcaption>
                 </figure>
               </div>
 
               <li style="margin-left:0; margin-bottom:15px;">
-                <strong style="color:#fff;">DNN + Random Forest:</strong> Combined deep neural networks with random forests
-                to reach 94% accuracy and 80% correlation. Published in Sensors (2020)
+                <strong style="color:#fff;">CNN + Random Forest:</strong> Achieved 94% binary classification accuracy using
+                a CNN model, and 80% regression correlation by combining the CNN model with a Random Forest model. This
+                work was published in Sensors (2020)
                 <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="images/dnn_rf_1.jpg" alt="DNN+RF 1">
-                  <figcaption>DNN+RF step 1</figcaption>
+                  <img src="research/research_8 (3).jpg" alt="DNN+RF 1">
+                  <figcaption>CNN + Random Forest Regression Model</figcaption>
                 </figure>
                 <figure>
-                  <img src="images/dnn_rf_2.jpg" alt="DNN+RF 2">
-                  <figcaption>DNN+RF step 2</figcaption>
-                </figure>
-                <figure>
-                  <img src="images/dnn_rf_3.jpg" alt="DNN+RF 3">
-                  <figcaption>DNN+RF step 3</figcaption>
+                  <img src="research/research_8 (4).jpg" alt="DNN+RF 2">
+                  <figcaption>Actual Vs. Predicted Response Time</figcaption>
                 </figure>
               </div>
 
               <li style="margin-left:0; margin-bottom:15px;">
-                <strong style="color:#fff;">3D-CNN:</strong> Designed a 3D convolutional neural network (3D-CNN) leveraging
-                spatial channel relationships to achieve 83% correlation. Presented at 2021 IEEE EMBC
+                <strong style="color:#fff;">3D-CNN:</strong> Designed a 3D convolutional neural network (3D-CNN) that leverages
+                inter-channel spatio-temporal relationships in EEG signals, achieving 83% regression correlation. This work
+                was presented at 2021 IEEE EMBC
                 <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
                 <figure>
-                  <img src="awards/award_1.jpg" alt="3D-CNN 1">
-                  <figcaption>3D-CNN step 1</figcaption>
+                  <img src="research/research_8 (5).jpg" alt="3D-CNN 1">
+                  <figcaption>Reposition EEG Channels for 3D Input Array</figcaption>
                 </figure>
                 <figure>
-                  <img src="awards/award_1.jpg" alt="3D-CNN 2">
-                  <figcaption>3D-CNN step 2</figcaption>
+                  <img src="research/research_8 (6).jpg" alt="3D-CNN 2">
+                  <figcaption>3D-CNN Model</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_8 (7).jpg" alt="3D-CNN 2">
+                  <figcaption>Actual Vs. Predicted Response Time</figcaption>
                 </figure>
               </div>
 
