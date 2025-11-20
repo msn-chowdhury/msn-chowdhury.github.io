@@ -855,13 +855,20 @@
             <em>Purdue University & Oak Ridge National Laboratory</em>
           </div>
           <div style="color:#ccc;">
-            Achieved over 99% accurate 2D strain tensor reconstruction by enforcing physics-based constraints. Developed
-            two algorithms for the purpose:<br><br>
+            Strain tensors are fundamental for assessing a component’s structural integrity—including its strength, durability,
+            and long-term reliability. Neutron Bragg edge strain tomography is a non-destructive technique for reconstructing
+            these tensors by analyzing wavelength-dependent Bragg edge information. However, the inverse problem associated
+            with the reconstruction is severely ill-posed, as at each position, one must recover a tensor (with 3 components
+            in 2D or 6 in 3D) from only a single scalar measurement.<br><br>
+
+            We developed two novel algorithms for estimating 2D strain tensors, achieving over 99% accuracy by enforcing
+            physics-based constraints. The algorithms are:<br><br>
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;">
-                <strong style="color:#fff;">MACE Model:</strong> A multi-agent consensus equilibrium (MACE) framework integrating
-                a sinogram-domain forward model for strain, model-based iterative reconstruction (MBIR), and physics-based
-                constraints to iteratively recover accurate 3D strain tensors. This work was presented at IEEE ICIP 2025
+                <strong style="color:#fff;">MACE Model:</strong> A multi-agent consensus equilibrium (MACE) framework that
+                integrates a sinogram-domain forward model, model-based iterative reconstruction (MBIR), and physics-based
+                constraints to iteratively recover accurate 2D strain tensors. We call this algorithm Model-Oriented Neutron
+                Strain Tomographic Reconstruction (MONSTR). This work was presented at IEEE ICIP 2025
                 <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
