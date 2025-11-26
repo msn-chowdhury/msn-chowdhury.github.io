@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ph.D. Candidate in Electrical Engineering at Purdue University." />
+  <title>Mohammad Samin Nur Chowdhury</title>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #000000;
+      color: #f0f0f0;
+      font-size: clamp(0.95rem, 1vw, 1.05rem);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1f1f1f;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1em;
+    }
+
+    nav a {
+      position: relative;
+      text-decoration: none;
+      color: #f0f0f0;
+      margin: 0 1em;
+      font-weight: 500;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d2b48c;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #d2b48c;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav .dropdown {
+      display: flex;          /* same as nav links */
+      align-items: center;    /* vertical alignment */
+      margin: 0 1em;          /* match nav a spacing */
+    }
+
+    nav .dropbtn {
+      all: unset;            /* remove browser defaults */
+      cursor: pointer;
+      color: inherit;        /* match nav a color */
+      font: inherit;         /* inherit font-family and size */
+      font-weight: 500;      /* match nav a */
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      transition: color 0.3s
+    }
+
+    a.dir-link {
+      color: #d2b48c;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a.dir-link:hover {
+      color: #ebc98f; /* slightly brighter gold on hover */
+      text-decoration: underline;
+    }
+
+    /* Cover + profile */
+    .cover {
+      position: relative;
+      margin-top: 70px;
+      min-height: 30vh;
+    }
+
+    .cover img.cover-img {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-pic {
+      position: absolute;
+      top: 100%; /* bottom of cover */
+      left: 5%;
+      transform: translateY(-50%); /* center on bottom */
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #d2b48c;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    .profile-text {
+      margin-left: 5%;
+      margin-top: 85px; /* profile-pic height /2 + gap */
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+    }
+
+    .profile-text h1.name {
+      font-weight: bold;
+      color: #d2b48c;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1;
+      margin: 0;
+    }
+
+    .profile-text .title {
+      color: white;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .profile-text .contacts {
+      display: flex;
+      gap: 0.625em;
+      margin-top: 0.3em;
+    }
+
+    .profile-text .contacts a {
+      color: #d2b48c;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      text-decoration: none;
+    }
+
+    main section {
+      width: 95%;
+      max-width: 1400px;
+      margin: 5em auto 2.5em auto;
+      padding: 0 1em;
+      scroll-margin-top: 90px;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      border-bottom: 2px solid #d2b48c;
+      padding-bottom: 0.3em;
+      color: #d2b48c;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-bottom:10px;
+    }
+
+    h4 {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      margin-bottom:5px;
+    }
+
+    p, li {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+
+    /* Dropdown button inherits nav link styles */
+    .dropbtn {
+    cursor: pointer;
+    }
+
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;            /* always start below the button */
+      left: clamp(-84px, -10vw, -88px);
+      min-width: clamp(240px, 60vw, 260px);
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      z-index: 2000;
+      border: 1px solid #3a3a3a;
+    }
+
+
+    .dropdown-content a {
+    display: block; /* keep vertical layout */
+    color: #f0f0f0;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: clamp(0.83rem, 1.8vw, 0.9rem);
+    }
+
+
+    .dropdown-content a:hover {
+    background-color: #3a3a3a;
+    color: #d2b48c;
+    }
+
+
+    /* Show dropdown when clicking */
+    .dropdown.show .dropdown-content {
+    display: block;
+    }
+
+    /* Offset for fixed header */
+    .scroll-anchor {
+      display: block;
+      height: 80px;   /* height of your fixed header + optional gap */
+      visibility: hidden; /* keep it invisible */
+    }
+
+    /* Icons for list items */
+    #about ul.education li::before {
+    content: '\f19d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em; }
+
+    #about ul.awards li::before {
+    content: '\f091';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em; }
+
+    #experience li::before {
+    content: '\f0b1';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    margin-right: 0.5em; }
+
+    #experience ul li ul li::before,
+    .internal-bullet::before {
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    font-size: 0.6em;
+    margin-right: 0.5em;}
+
+    #research ul li ul li::before,
+    .internal-bullet::before {
+    content: '\f111';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #d2b48c;
+    display: inline-block;
+    width: 1.2em;
+    font-size: 0.6em;
+    margin-right: 0.5em;}
+
+    footer {
+      text-align: center;
+      padding: 1.25em;
+      font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+        main section {
+            scroll-margin-top: 110px; /* header height + small gap */
+        }
+      nav { flex-wrap: wrap; }
+      nav a,
+      nav .dropdown {
+        margin: 0.625em;
+      }
+      .cover img.cover-img { height: 30vh; }
+      .profile-pic { width: 120px; height: 120px; transform: translateY(-50%); }
+      .profile-text { margin-top: 65px; } /* profile-pic height /2 + gap */
+    }
+
+
+    /* Scoped styles for the About section */
+    #about .expertise-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 10px;
+    }
+
+    #about .expertise-tags span {
+      background-color:  #d2b48c;
+      color: #000000; /* black text */
+      padding: 4px 6px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: transform 0.2s, background-color 0.2s;
+      cursor: default;
+    }
+
+    #about .expertise-tags span:hover {
+      transform: translateY(-2px);
+      background-color: #e0c295; /* slightly darker gold on hover */
+    }
+
+    #about .about-skills-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    #about .about-skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80px;
+      text-align: center;
+    }
+
+    #about .about-skill-item img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 6px;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    #about .about-skill-item img:hover {
+      transform: scale(1.1);
+      filter: brightness(1.15);
+    }
+
+    #about .about-skill-item span {
+      font-size: 0.9em;
+      color: #f0f0f0;
+    }
+
+    .site-images {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .site-images figure {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+      vertical-align: top;  /* ensures figures line up nicely */
+      max-width: 350px;     /* match the image max width */
+    }
+
+    .site-images img {
+      width: 100%;
+      max-width: 350px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: transform 1s ease, z-index 0.1s ease;
+      z-index: 1;
+    }
+
+    .site-images img:hover {
+      /* transform is overridden by JS */
+      z-index: 9999999;
+      position: relative;
+    }
+
+    .site-images figcaption {
+      display: block;       /* ensures it behaves like a block element */
+      word-wrap: break-word;/* wrap long text */
+      white-space: normal;  /* allow multiple lines */
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 5px;
+      text-align: center;   /* optional, center text under image */
+    }
+
+    .site-images .fig-title {
+      display: block;
+      font-weight: bold;
+      font-size: 1em;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .research-item {
+      position: relative;
+    }
+
+    .research-item .with-line {
+      border-left: 2px solid #d2b48c;
+      padding-left: 12px;
+      margin-left: 12px;   /* left spacing */
+      margin-top: 12px;    /* gap below title */
+    }
+
+    /* Scoped styles for the Publications section */
+    #publications .pub-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #publications .pub-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 22px;
+    }
+
+    #publications .pub-index {
+      margin-right: 10px;
+      color: #d2b48c;
+      font-weight: bold;
+      font-size: 0.95em;
+      min-width: 32px; /* aligns [1], [10], [12] perfectly */
+    }
+
+    #publications .pub-content {
+      border-left: 2px solid #d2b48c;
+      padding-left: 12px;
+    }
+
+    #publications .title {
+      margin: 0 0 4px 0;
+      font-weight: bold;
+    }
+
+    #publications .authors {
+      font-size: 0.9em;
+      color: #ccc;
+      margin: 3px 0;
+    }
+
+    #publications .venue {
+      font-size: 0.85em;
+      font-style: italic;
+      color: #aaa;
+      margin: 3px 0 8px;
+    }
+
+    #publications .highlight {
+      color: #d2b48c;
+      font-weight: bold;
+    }
+
+    #publications .view-btn {
+      display: inline-block;
+      background: transparent;
+      color: #d2b48c;
+      border: 1px solid #d2b48c;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 0.8em;
+      text-decoration: none;
+      margin-right: 6px;
+      transition: all 0.3s ease;
+    }
+
+    #publications .view-btn:hover {
+      background-color: #d2b48c;
+      color: #000;
+    }
+
+  </style>
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+
+        <!-- Research Dropdown Wrapper -->
+        <div class="dropdown">
+          <a href="#research" class="dropbtn">Research</a>
+          <div class="dropdown-content">
+            <a href="#proj_1">Fast Hyper. Neutron Imaging</a>
+            <a href="#proj_2">Strain Tensor Recon.</a>
+            <a href="#proj_3">Intelligent Data Acquisition</a>
+            <a href="#proj_4">Large MBIR with Transformer</a>
+            <a href="#proj_5">Plug-and-Play with Diffusion </a>
+            <a href="#proj_6">Multi-Pose Fusion</a>
+            <a href="#proj_7">AI-Enhanced Sparse Recon.</a>
+            <a href="#proj_8">Reaction Time from EEG</a>
+          </div>
+        </div>
+
+        <a href="#publications">Publications</a>
+    </nav>
+</header>
+
+  <div class="cover">
+    <picture>
+      <source media="(max-width:600px)" srcset="profile_cover/cover.jpg">
+      <img src="profile_cover/cover.jpg" alt="Cover Photo" class="cover-img">
+    </picture>
+    <img src="profile_cover/profile.jpg" alt="Portrait of Mohammad Samin Nur Chowdhury" class="profile-pic" loading="lazy">
+  </div>
+
+  <div class="profile-text">
+    <h1 class="name">Mohammad Samin Nur Chowdhury</h1>
+    <span class="title">Ph.D. Candidate | Purdue University</span>
+    <div class="contacts">
+      <a href="mailto:chowdh31@purdue.edu" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mohammad-samin-nur-chowdhury" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" target="_blank" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+    </div>
+  </div>
+
+<main>
+<section id="about">
+  <h2>About</h2>
+  <div class="about-content" style="display:flex; flex-wrap:wrap; gap:40px; align-items:flex-start; align-items:stretch;">
+
+    <!-- LEFT COLUMN: Summary, Expertise, Education -->
+    <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff;">
+      <p>
+        Hello! I’m a Ph.D. candidate in Electrical Engineering at Purdue University, advised by
+        <a href="https://engineering.purdue.edu/~bouman/" target="_blank" class="dir-link">Dr. Charles A. Bouman</a> and
+        <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" class="dir-link">Dr. Gregery T. Buzzard</a>. I have
+        8+ years of experience in computational imaging, inverse problems, and machine learning, with multiple awards at
+        top international conferences. My current research focuses on developing physics-informed AI algorithms for hyperspectral
+        neutron imaging at Oak Ridge National Laboratory. Prior to Purdue, I worked at Microsoft developing next-generation
+        camera ISP pipelines and at UNAR Labs creating computer vision solutions for assistive technologies.
+      </p>
+
+      <h3>Areas of Expertise</h3>
+      <div class="expertise-tags">
+        <span>Computational Imaging</span>
+        <span>Inverse Problems</span>
+        <span>Image Processing</span>
+        <span>Machine & Deep Learning</span>
+        <span>Physics-Informed AI</span>
+        <span>Computed Tomography</span>
+        <span>Camera ISP</span>
+        <span>Computer Vision</span>
+        <span>Generative AI</span>
+        <span>Vision Transformers</span>
+        <span>Diffusion Models</span>
+      </div>
+
+      <h3>Education</h3>
+      <ul class="education" style="list-style:none; padding:0; margin:0;">
+        <li style="margin-bottom:15px;">
+          <strong style="color:#fff; font-size:1.2em;">Ph.D. in Electrical Engineering</strong><br>
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+            <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
+            <em>Purdue University, West Lafayette, Indiana, USA | May 2026</em>
+          </div>
+          <div style="margin-left:35px; color:#ccc;">
+            Advisors:
+            <a href="https://engineering.purdue.edu/~bouman/" target="_blank" class="dir-link">Dr. Charles A. Bouman</a> &
+            <a href="https://www.math.purdue.edu/~buzzard/" target="_blank" class="dir-link">Dr. Gregery T. Buzzard</a>
+          </div>
+        </li>
+
+        <li style="margin-bottom:15px;">
+          <strong style="color:#fff; font-size:1.2em;">M.S. in Electrical Engineering</strong><br>
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+            <img src="logos/asu_logo.png" alt="Arizona State University Logo" style="width:40px; height:auto; margin-right:10px;">
+            <em>Arizona State University, Tempe, Arizona, USA | Dec 2019</em>
+          </div>
+          <div style="margin-left:35px; color:#ccc;">
+            Advisor:
+            <a href="https://search.asu.edu/profile/2001925/" target="_blank" class="dir-link">Dr. Daniel W. Bliss</a>
+          </div>
+        </li>
+
+        <li>
+          <strong style="color:#fff; font-size:1.2em;">B.S. in Electrical Engineering</strong><br>
+          <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+            <img src="logos/buet_logo.png" alt="BUET Logo" style="width:40px; height:auto; margin-right:10px;">
+            <em>Bangladesh University of Engineering and Technology, Bangladesh | May 2016 </em>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT COLUMN: Technical Skills -->
+    <div style="flex:0 1 auto; display:flex; flex-direction:column; background-color:#121212; padding:15px; border-radius:8px; color:#fff; justify-content: space-between;">
+
+      <h4>Programming Languages</h4>
+      <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:50px;">
+
+        <!-- First pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://www.python.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="width:35px;" alt="Python" title="Python" />
+            </a>
+            <span>Python</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://www.mathworks.com/products/matlab.html" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" style="width:35px;" alt="MATLAB" title="MATLAB" />
+            </a>
+            <span>MATLAB</span>
+          </div>
+        </div>
+
+        <!-- Second pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://www.c-language.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" style="width:35px;" alt="C" title="C" />
+            </a>
+            <span>C</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://isocpp.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" style="width:35px;" alt="C++" title="C++" />
+            </a>
+            <span>C++</span>
+          </div>
+        </div>
+      </div>
+
+      <h4>ML & CV Libraries</h4>
+      <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:50px;">
+
+        <!-- First pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://pytorch.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" style="width:30px;" alt="PyTorch" title="PyTorch" />
+            </a>
+            <span>PyTorch</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://www.tensorflow.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" style="width:30px;" alt="TensorFlow" title="TensorFlow" />
+            </a>
+            <span>TensorFlow</span>
+          </div>
+        </div>
+
+        <!-- Second pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://scikit-learn.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" style="width:30px;" alt="Scikit-learn" title="Scikit-learn" />
+            </a>
+            <span>Scikit-learn</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://opencv.org/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" style="width:30px;" alt="OpenCV" title="OpenCV" />
+            </a>
+            <span>OpenCV</span>
+          </div>
+        </div>
+
+      </div>
+
+      <h4>Software Dev. Contributions</h4>
+      <div class="about-skills-logos" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px;">
+
+        <!-- First pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://mbirjax.readthedocs.io/en/latest/" target="_blank">
+              <img src="logos/mbirjax_logo.png" style="height:25px; width:auto; margin-top:10px; margin-bottom:10px;" alt="MBIRJAX" title="MBIRJAX" />
+            </a>
+            <span>MBIRJAX</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://gmcluster.readthedocs.io/en/latest/index.html" target="_blank">
+              <img src="logos/gmcluster_logo.png" style="height:25px; width:auto; margin-top:10px; margin-bottom:10px;" alt="GMCluster" title="GMCluster" />
+            </a>
+            <span>GMCluster</span>
+          </div>
+        </div>
+
+        <!-- Second pair -->
+        <div style="display:flex; gap:10px; justify-content:center;">
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a href="https://svmbir.readthedocs.io/en/latest/index.html" target="_blank">
+              <img src="logos/svmbir_logo.png" style="height:25px; width:auto; margin-top:10px; margin-bottom:10px;" alt="SVMBIR" title="SVMBIR" />
+            </a>
+            <span>SVMBIR</span>
+          </div>
+          <div class="about-skill-item" style="flex:1; text-align:center;">
+            <a>
+              <img src="logos/best_logo.png" style="height:25px; width:auto; margin-top:10px; margin-bottom:10px;" alt="BEST" title="BEST" />
+            </a>
+            <span>BEST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THIRD COLUMN: Awards -->
+    <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
+      <h3>Awards</h3>
+      <ul class="site-images" style="list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <div class="fig-title"><ul class="awards"><li>Best Student Paper Award<br>IEEE ICIP 2023</li></ul></div>
+            <img src="awards/award_1.jpg" alt="ICIP 2023 Certificate">
+            <figcaption>
+              <em>"Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography"</em>
+            </figcaption>
+          </figure>
+        </li>
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <div class="fig-title"><ul class="awards"><li>Best Presentation Award<br>WCNR 2024</li></ul></div>
+            <img src="awards/award_2.jpg" alt="WCNR 2024 Certificate">
+            <figcaption>
+              <em>"Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction"</em>
+            </figcaption>
+          </figure>
+        </li>
+        <li style="flex:1 1 300px; max-width:400px; text-align:center;">
+          <figure>
+            <div class="fig-title"><ul class="awards"><li>Top 3% Paper Recognition<br>IEEE ICASSP 2023</li></ul></div>
+            <img src="awards/award_3.jpg" alt="ICASSP 2023 Certificate">
+            <figcaption>
+              <em>"An Edge Alignment-Based Orientation Selection Method for Neutron Tomography"</em>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
+  <ul style="list-style:none; padding:0; margin:0;">
+  <li style="margin-bottom:20px;">
+    <strong style="color:#fff; font-size:1.2em;">Research Assistant</strong><br>
+    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+      <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
+      <em>Purdue University, West Lafayette, Indiana, USA | May 2021 – Present</em>
+    </div>
+    <div style="margin-left:35px; color:#ccc;">
+      <ul>
+        <li>Developed physics-informed AI algorithms for hyperspectral neutron imaging at Oak Ridge National Laboratory.</li>
+        <li>Built a scalable Python package for fast 4D hyperspectral denoising, reconstruction, and material decomposition.</li>
+        <li>Designed a robust Python package for accurate strain tensor estimation from neutron Bragg edge measurements.</li>
+      </ul>
+    </div>
+  </li>
+
+  <li style="margin-bottom:20px;">
+    <strong style="color:#fff; font-size:1.2em;">Teaching Assistant</strong><br>
+    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+      <img src="logos/purdue_logo.png" alt="Purdue University Logo" style="width:40px; height:auto; margin-right:10px;">
+      <em>Purdue University, West Lafayette, Indiana, USA | Jan 2021 – May 2021</em>
+    </div>
+    <div style="margin-left:35px; color:#ccc;">
+      <ul>
+        <li>Led Python-based lab sessions for <em>Digital Signal Processing with Applications</em>.</li>
+      </ul>
+    </div>
+  </li>
+
+  <li style="margin-bottom:20px;">
+    <strong style="color:#fff; font-size:1.2em;">Image Quality Engineer</strong><br>
+    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+      <img src="logos/microsoft_logo.png" alt="Microsoft Logo" style="width:40px; height:auto; margin-right:10px;">
+      <em>Microsoft Corporation, Redmond, Washington, USA | Jul 2020 – Dec 2020</em>
+    </div>
+    <div style="margin-left:35px; color:#ccc;">
+      <ul>
+        <li>Developed camera ISP pipelines for Surface devices, optimized for diverse lighting conditions.</li>
+        <li>Enhanced 3A performance (auto exposure, white balance, focus), low-light noise reduction, and color consistency.</li>
+        <li>Developed AI models for skin-tone correction, local gamma refinement, and overexposed sky reconstruction.</li>
+        <li>Collaborated with cross-functional hardware and software teams to optimize sensor-to-display pipeline.</li>
+      </ul>
+    </div>
+  </li>
+
+  <li style="margin-bottom:20px;">
+    <strong style="color:#fff; font-size:1.2em;">AI/ML Research Intern</strong><br>
+    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+      <img src="logos/unarlabs_logo.png" alt="UNAR Labs Logo" style="width:40px; height:auto; margin-right:10px;">
+      <em>UNAR Labs, Portland, Maine, USA | Summer 2020</em>
+    </div>
+    <div style="margin-left:35px; color:#ccc;">
+      <ul>
+        <li>Designed AI algorithms to convert scientific documents into accessible formats for visually impaired users.</li>
+        <li>Implemented real-time image analysis, optical character recognition (OCR), and pattern recognition techniques.</li>
+      </ul>
+    </div>
+  </li>
+
+  <li>
+    <strong style="color:#fff; font-size:1.3em;">Teaching Assistant</strong><br>
+    <div style="display:flex; align-items:center; margin-left:35px; color:#ccc;">
+      <img src="logos/asu_logo.png" alt="Arizona State University Logo" style="width:40px; height:auto; margin-right:10px;">
+      <em>Arizona State University, Tempe, Arizona, USA | Aug 2018 – May 2019</em>
+    </div>
+    <div style="margin-left:35px; color:#ccc;">
+      <ul>
+        <li>Conducted MATLAB and GNU Radio-based lab sessions for <em>Communication Systems</em>.</li>
+      </ul>
+    </div>
+  </li>
+  </ul>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%; overflow:auto;">
+    <ul class="research" style="list-style:none; padding:0; margin:0;">
+
+      <!-- 1st Sub-Section -->
+      <div id="proj_1">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Fast Unsupervised Machine Learning Algorithms for Hyperspectral Neutron Imaging</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            Neutron imaging is a non-destructive technique for analyzing the internal structure of a sample and provides
+            information complementary to X-ray imaging. Hyperspectral neutron imaging extends this capability by capturing
+            hundreds to thousands of wavelength-resolved neutron radiographs, enabling detailed spectral characterization
+            of the sample’s constituent materials. However, due to their massive size and extremely low signal-to-noise
+            ratios (SNR), hyperspectral neutron datasets are exceptionally difficult and time-consuming to analyze.<br><br>
+            <div class="site-images">
+              <figure>
+                <img src="research/research_1_1.JPG" alt="X-ray Vs. Neutron Imaging">
+                <figcaption>X-ray Vs. Neutron Imaging</figcaption>
+              </figure>
+              <figure>
+                <img src="research/research_1_2.JPG" alt="Hyperspectral Neutron Data Collection">
+                <figcaption>Hyperspectral Neutron Data Collection</figcaption>
+              </figure>
+            </div>
+            We developed a family of three fast algorithms that dramatically improve hyperspectral neutron data processing
+            and analysis. All three are unified under a dehydration–rehydration framework:<br><br>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <!-- Dehydration -->
+              <li style="margin-left:40px; margin-bottom:15px;">
+                <strong style="color:#fff;">Dehydration:</strong> Performs unsupervised machine learning–based dimensionality
+                reduction, representing large hyperspectral datasets in a compact subspace—no prior training required.
+              </li>
+
+              <!-- Rehydration -->
+              <li style="margin-left:40px; margin-bottom:30px;">
+                <strong style="color:#fff;">Rehydration:</strong> Restores data from the subspace to the hyperspectral domain,
+                preserving both structural and spectral fidelity.
+              </li>
+
+              <!-- FHD -->
+              <li style="margin-bottom:15px;">
+                <strong style="color:#fff;">Fast Hyperspectral Denoising (FHD):</strong> Achieves over 30 dB SNR improvement
+                while preserving spectral and spatial details. Sequential dehydration and rehydration suppress spectral
+                noise during subspace fitting and restore clean, high-SNR hyperspectral data.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_1_3.JPG" alt="FHD Algorithm">
+                  <figcaption>FHD Algorithm</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_1_4.JPG" alt="Noisy Vs. Denoised: Spatial">
+                  <figcaption>Noisy Vs. Denoised: Spatial</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_1_5.JPG" alt="Noisy Vs. Denoised: Spectral">
+                  <figcaption>Noisy Vs. Denoised: Spectral</figcaption>
+                </figure>
+              </div>
+
+              <!-- FHR -->
+              <li style="margin-bottom:15px;">
+                <strong style="color:#fff;">Fast Hyperspectral Reconstruction (FHR):</strong> Performs over 1,000 3D reconstructions
+                in under an hour—more than 10× faster than traditional approaches—while reducing noise and improving image
+                quality. Sequential dehydration, tomographic reconstruction, and rehydration. This work received the Best
+                Presentation Award at the 12th World Conference on Neutron Radiography (WCNR), 2024
+                <a href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_1_6.JPG" alt="FHR Algorithm">
+                  <figcaption>FHR Algorithm</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_1_7.JPG" alt="Traditional Reconstruction Vs. FHR">
+                  <figcaption>Traditional Reconstruction Vs. FHR</figcaption>
+                </figure>
+              </div>
+
+              <!-- FMD -->
+              <li style="margin-bottom:15px;">
+                <strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides 10× faster volumetric material
+                separation and 25+ dB SNR improvement through sequential implementation of dehydration, tomographic reconstruction,
+                and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at the IEEE
+                International Conference on Image Processing (ICIP), 2023
+                <a href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank" class="dir-link">[paper]</a>,
+                and the extended version was published in IEEE Transactions on Computational Imaging (2025)
+                <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_1_8.JPG" alt="FMD Algorithm">
+                  <figcaption>FMD Algorithm</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_1_9.JPG" alt="FMD Material Separation">
+                  <figcaption>FMD Material Separation</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_1_10.JPG" alt="FMD Spectra Estimation">
+                  <figcaption>FMD Spectra Estimation</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 2nd Sub-Section -->
+      <div id="proj_2">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Physics-Constrained Strain Tensor Reconstruction from Neutron Bragg Edge Data</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            Strain tensors are fundamental for assessing a component’s structural integrity—including its strength, durability,
+            and long-term reliability. Neutron Bragg edge strain tomography is a non-destructive technique that reconstructs
+            these tensors by analyzing strain sinograms derived from Bragg-edge measurements. However, the inverse problem
+            associated with the reconstruction is severely ill-posed, as at each position, one must recover a tensor (with
+            3 components in 2D or 6 in 3D) from only a single scalar measurement.<br><br>
+            <div class="site-images">
+              <figure>
+                <img src="research/research_2_1.JPG" alt="Strain Sinogram Generation">
+                <figcaption>Strain Sinogram Generation</figcaption>
+              </figure>
+            </div>
+
+            To address this challenge, we developed two novel algorithms for reconstructing 2D strain tensors, achieving
+            over 99% accuracy by enforcing physics-based constraints. The algorithms are:<br><br>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">MACE Model:</strong> A Multi-Agent Consensus Equilibrium (MACE) framework that
+                integrates a sinogram-domain forward model, model-based iterative reconstruction (MBIR), and physics-based
+                constraints to iteratively recover accurate 2D strain tensors. We call this algorithm Model-Oriented Neutron
+                Strain Tomographic Reconstruction (MONSTR). This work was presented at the IEEE International Conference
+                on Image Processing (ICIP), 2025
+                <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_2_2.JPG" alt="MONSTR Algorithm">
+                  <figcaption>MONSTR Algorithm</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_2_3.JPG" alt="Simulated Data Results">
+                  <figcaption>Simulated Data Results</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_2_4.JPG" alt="Measured Data Results">
+                  <figcaption>Measured Data Results</figcaption>
+                </figure>
+              </div>
+
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">GAN Model:</strong> A generative adversarial network (GAN) where the generator
+                reconstructs 2D strain tensors and the discriminator enforces structural realism guided by physics-based
+                constraints. We plan to present this work at an upcoming conference.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_2_5.JPG" alt="GAN 1">
+                  <figcaption>GAN-Based Algorithm</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 3rd Sub-Section -->
+      <div id="proj_3">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Intelligent Data Acquisition for Hyperspectral Neutron CT</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            Data acquisition for hyperspectral neutron CT requires substantial time and resources at the beamline. Since
+            beamline time is both limited and highly valuable, it is essential to maximize the information gained from each
+            experiment while minimizing resource consumption. Achieving this goal necessitates intelligent and autonomous
+            data acquisition strategies.<br><br>
+
+            To address this, we developed AI-powered methods to optimize hyperspectral neutron CT data acquisition, helping
+            to conserve valuable beamline time and resources:<br><br>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">Adaptive Orientation Selection:</strong> Optimizes sample orientation selection
+                based on edge alignment, reducing the number of measurements required for high-quality reconstructions.
+                When applied to simulated and measured data, it significantly outperformed traditional golden-ratio-based
+                view selection. This work received the Top 3% Contribution Award at the IEEE International Conference on
+                Acoustics, Speech, and Signal Processing (ICASSP), 2023
+                <a href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_3_1.JPG" alt="Proposed Vs. Golden Ratio-Based View Selection">
+                  <figcaption>Proposed Vs. Golden Ratio-Based View Selection</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_3_2.JPG" alt="Normalized Root Mean Square Error (NRMSE) Between Reconstruction and Ground Truth">
+                  <figcaption>Normalized Root Mean Square Error (NRMSE) Between Reconstruction and Ground Truth</figcaption>
+                </figure>
+              </div>
+
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">Machine Learning Decision Criterion:</strong> Reduced hyperspectral data collection
+                time by 5× at ORNL by combining advanced reconstruction algorithms with a machine learning–based protocol
+                that terminates experiments once sufficient information is acquired. This work was published in Scientific
+                Reports by Nature (2024)
+                <a href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_3_3.JPG" alt="ORNL HyperCT Workflow">
+                  <figcaption>ORNL HyperCT Workflow</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 4th Sub-Section -->
+      <div id="proj_4">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Fast Large-Scale Model-Based Iterative Reconstruction (MBIR) Using Vision Transformer</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            <ul style="list-style:none; padding:0; margin:0;">
+              With increasing detector sizes, the amount of data for CT reconstruction is also growing. While Model-Based
+              Iterative Reconstruction (MBIR) produces high-quality results, it becomes extremely time-consuming for large-scale
+              datasets. To achieve fast and reliable reconstructions, we proposed the following pipeline:<br><br>
+
+              <strong style="color:#d2b48c">1.</strong> Downsample projection/sinogram data.<br>
+
+              <strong style="color:#d2b48c">2.</strong> Perform MBIR on the downsampled data.<br>
+
+              <strong style="color:#d2b48c">3.</strong> Upsample the reconstruction using a Transformer-based super-resolution
+              network (SwinIR).<br>
+
+              <strong style="color:#d2b48c">4.</strong> Refine the reconstruction with a few iterations of MBIR on the original
+              data.<br><br>
+
+              This framework achieved close to 3x faster reconstruction while maintaining high-quality results.
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_4_1.JPG" alt="Reconstruction Pipeline">
+                  <figcaption>Reconstruction Pipeline</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_4_2.JPG" alt="Direct MBIR Vs. Proposed Recon.">
+                  <figcaption>Direct MBIR Vs. Proposed Recon.</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 5th Sub-Section -->
+      <div id="proj_5">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Plug-and-Play Framework with a Diffusion Prior for High-Quality Reconstruction</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            <ul style="list-style:none; padding:0; margin:0;">
+              We developed a plug-and-play CT reconstruction framework that integrates the standard forward model with a
+              diffusion-based prior (DiffUNet). This approach improved reconstruction SNR by over 15 dB compared to traditional
+              method.
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_5_1.JPG" alt="Traditional Vs. Diffusion-based PnP Recon.">
+                  <figcaption>Traditional Vs. Diffusion-based PnP Recon.</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+
+      <!-- 6th Sub-Section -->
+      <div id="proj_6">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Multi-Pose Fusion for Material Decomposition in Hyperspectral Neutron Tomography</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            We previously proposed a fast material decomposition algorithm capable of volumetrically separating materials
+            in a sample using hyperspectral neutron CT data. However, for objects with complex geometries or heterogeneous
+            compositions, relying on a single-pose dataset can lead to inaccurate material decomposition.<br><br>
+
+            To overcome this limitation, we developed a multi-pose fusion algorithm that integrates data acquired from multiple
+            sample poses—i.e., distinct tilt configurations—within a Multi-Agent Consensus Equilibrium (MACE) framework,
+            enabling highly accurate and robust material decomposition. This work was presented at the Asilomar Conference
+            on Signals, Systems, and Computers, 2024
+            <a href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank" class="dir-link">[paper]</a>.
+            <div class="site-images">
+              <figure>
+                <img src="research/research_6_1.JPG" alt="Multi-Pose Fusion Algorithm">
+                <figcaption>Multi-Pose Fusion Algorithm</figcaption>
+              </figure>
+              <figure>
+                <img src="research/research_6_2.JPG" alt="Multi-Pose Fusion Results">
+                <figcaption>Multi-Pose Fusion Results</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 7th Sub-Section -->
+      <div id="proj_7">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>AI-Enhanced Sparse-View Reconstruction for ToF Neutron Imaging</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Purdue University & Oak Ridge National Laboratory</em>
+          </div>
+          <div style="color:#ccc;">
+            Since hyperspectral neutron data collection is extremely time-consuming, it is often impractical to acquire
+            measurements from a wide range of views for full tomographic reconstruction. However, sparse-view reconstructions
+            produced by traditional methods typically suffer from severe artifacts and loss of detail.<br><br>
+
+            To address this limitation, we proposed a reconstruction framework that first computes a low-quality sparse-view
+            reconstruction and then enhances it using a deep neural network trained on pairs of low-quality and high-quality
+            reconstructions of the same samples. This hybrid method yields significantly improved reconstructions over conventional
+            sparse-view techniques. The work was presented at the 12th World Conference on Neutron Radiography (WCNR), 2024
+            <a href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
+            <div class="site-images">
+              <figure>
+                <img src="research/research_7_1.JPG" alt="Proposed Algorithm">
+                <figcaption>Proposed Algorithm</figcaption>
+              </figure>
+              <figure>
+                <img src="research/research_7_2.JPG" alt="Reconstruction Results">
+                <figcaption>Reconstruction Results</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </li>
+      </div>
+
+      <!-- 8th Sub-Section -->
+      <div id="proj_8">
+      <div class="scroll-anchor"></div>
+      <li class="research-item" style="margin-bottom:60px;">
+        <h3>Reaction Time Estimation from Multi-Channel EEG</h3>
+        <div class="with-line" style="border-left:2px solid #d2b48c; padding-left:12px; margin-top:6px;">
+          <div style="color:#ccc; margin-bottom:20px;">
+            <em>Arizona State University</em>
+          </div>
+          <div style="color:#ccc;">
+            Human behavioral responses during perceptual decision-making are closely related to the brain’s electrical activity,
+            as measured by electroencephalograms (EEG). Accurately modeling this relationship and predicting human responses
+            directly from EEG offers powerful opportunities in psychology, clinical neuroscience, and brain–computer interface
+            (BCI) development.<br><br>
+
+            We developed a series of machine learning and deep learning algorithms to predict human response times from
+            multi-channel EEG signals:<br><br>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">ML Models:</strong> Implemented multiple machine learning models for both classification
+                and regression tasks, achieving 79% accuracy in binary classification and 74% correlation in regression.
+                This work was presented at the International Conference of the IEEE Engineering in Medicine and Biology
+                Society (EMBC), 2020
+                <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_8_1.JPG" alt="Regression Performance Comparison Among Machine Learning Models">
+                  <figcaption>Regression Performance Comparison Among Machine Learning Models</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_8_2.JPG" alt="Actual Vs. Predicted Response Time for Random Forest Model">
+                  <figcaption>Actual Vs. Predicted Response Time for Random Forest Model</figcaption>
+                </figure>
+              </div>
+
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">CNN + Random Forest:</strong> Achieved 94% binary classification accuracy using
+                a CNN model, and 80% regression correlation by combining the CNN model with a Random Forest model. This
+                work was published in Sensors (2020)
+                <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_8_3.JPG" alt="CNN + Random Forest Regression Model">
+                  <figcaption>CNN + Random Forest Regression Model</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_8_4.JPG" alt="Actual Vs. Predicted Response Time">
+                  <figcaption>Actual Vs. Predicted Response Time</figcaption>
+                </figure>
+              </div>
+
+              <li style="margin-left:0; margin-bottom:15px;">
+                <strong style="color:#fff;">3D-CNN:</strong> Designed a 3D convolutional neural network (3D-CNN) that leverages
+                inter-channel spatio-temporal relationships in EEG signals, achieving 83% regression correlation. This work
+                was presented at the International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC),
+                2021
+                <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
+              </li>
+              <div class="site-images">
+                <figure>
+                  <img src="research/research_8_5.JPG" alt="Reposition EEG Channels for 3D Input Array">
+                  <figcaption>Reposition EEG Channels for 3D Input Array</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_8_6.JPG" alt="3D-CNN Model">
+                  <figcaption>3D-CNN Model</figcaption>
+                </figure>
+                <figure>
+                  <img src="research/research_8_7.JPG" alt="Actual Vs. Predicted Response Time">
+                  <figcaption>Actual Vs. Predicted Response Time</figcaption>
+                </figure>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+      </div>
+
+    </ul>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <div style="flex:2 1 600px; min-width:300px; background-color:#121212; padding:15px; border-radius:8px; color:#fff; height:100%;">
+    <p>
+      <a href="https://scholar.google.com/citations?user=WWaeLM4AAAAJ" class="view-btn" target="_blank">
+        Google Scholar
+      </a>
+    </p>
+
+    <h3>Journal Articles</h3>
+    <ul class="pub-list">
+
+      <!-- 1 -->
+      <li class="pub-item">
+        <span class="pub-index">[1]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Fast Hyperspectral Neutron Tomography</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan,
+            H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>IEEE Transactions on Computational Imaging</em>, 2025</p>
+          <a class="view-btn" href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10994513" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 2 -->
+      <li class="pub-item">
+        <span class="pub-index">[2]</span>
+        <div class="pub-content">
+          <p class="title"><strong>A Machine Learning Decision Criterion for Reducing Scan Time for Hyperspectral Neutron
+            Computed Tomography Systems</strong></p>
+          <p class="authors">S. Tang, S. V. Venkatakrishnan, <span class="highlight">M. S. N. Chowdhury</span>, D. Yang,
+            M. Gober, G. J. Nelson, M. Cekanova, A. S. Biris, G. T. Buzzard, C. A. Bouman, H. D. Skorpenske, and H. Z. Bilheux</p>
+          <p class="venue"><em>Scientific Reports</em>, 2024</p>
+          <a class="view-btn" href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://www.nature.com/articles/s41598-024-63931-x" target="_blank">nature</a>
+        </div>
+      </li>
+
+      <!-- 3 -->
+      <li class="pub-item">
+        <span class="pub-index">[3]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Deep Neural Network for Visual Stimulus-Based Reaction Time Estimation Using the Periodogram
+            of Single-Trial EEG</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais, G. A.
+            Brewer, and D. W. Bliss</p>
+          <p class="venue"><em>Sensors</em>, 2020</p>
+          <a class="view-btn" href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://www.mdpi.com/1424-8220/20/21/6090" target="_blank">MDPI</a>
+        </div>
+      </li>
+    </ul>
+
+    <h3>Conference Papers</h3>
+    <ul class="pub-list">
+
+      <!-- 4 -->
+      <li class="pub-item">
+        <span class="pub-index">[4]</span>
+        <div class="pub-content">
+          <p class="title"><strong>MONSTR: Model-Oriented Neutron Strain Tomographic Reconstruction</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, S. Tang, S. V. Venkatakrishnan,
+            H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>IEEE International Conference on Image Processing (ICIP)</em>, 2025</p>
+          <a class="view-btn" href="publications/chowdhury_2025_monstr.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/11083970" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 5 -->
+      <li class="pub-item">
+        <span class="pub-index">[5]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Autonomous Polycrystalline Material Decomposition for Hyperspectral Neutron Tomography</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan,
+            H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>IEEE International Conference on Image Processing (ICIP)</em>, 2023</p>
+          <a class="view-btn" href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10222012" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 6 -->
+      <li class="pub-item">
+        <span class="pub-index">[6]</span>
+        <div class="pub-content">
+          <p class="title"><strong>An Edge Alignment-Based Orientation Selection Method for Neutron Tomography</strong></p>
+          <p class="authors">D. Yang, S. Tang, S. V. Venkatakrishnan, <span class="highlight">M. S. N. Chowdhury</span>,
+            Y. Zhang, H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</em>, 2023</p>
+          <a class="view-btn" href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10097185" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 7 -->
+      <li class="pub-item">
+        <span class="pub-index">[7]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Multi-Pose Fusion for Autonomous Polycrystalline Material Decomposition in Hyperspectral
+            Neutron Tomography</strong></p>
+          <p class="authors">D. Yang, <span class="highlight">M. S. N. Chowdhury</span>, S. Tang, S. V. Venkatakrishnan,
+            H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>Asilomar Conference on Signals, Systems, and Computers</em>, 2024</p>
+          <a class="view-btn" href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/10942621" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 8 -->
+      <li class="pub-item">
+        <span class="pub-index">[8]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Fast Hyperspectral Reconstruction for Neutron Computed Tomography Using Subspace Extraction</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. Tang, S. V. Venkatakrishnan,
+            A. W. Needham, H. Z. Bilheux, G. T. Buzzard, and C. A. Bouman</p>
+          <p class="venue"><em>World Conference on Neutron Radiography (WCNR)</em>, 2024</p>
+          <a class="view-btn" href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank">PDF</a>
+          <a class="view-btn" target="_blank">Springer Nature</a>
+        </div>
+      </li>
+
+      <!-- 9 -->
+      <li class="pub-item">
+        <span class="pub-index">[9]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Enhancing Reconstruction of Time-of-Flight Neutron Computed Tomography Using Artificial
+            Intelligence</strong></p>
+          <p class="authors">S. Tang, <span class="highlight">M. S. N. Chowdhury</span>, D. Yang, S. V. Venkatakrishnan,
+            K. D. Anderson, R. Ross, G. T. Buzzard, C. A. Bouman, Y. Zhang, and H. Z. Bilheux</p>
+          <p class="venue"><em>World Conference on Neutron Radiography (WCNR)</em>, 2024</p>
+          <a class="view-btn" href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank">PDF</a>
+          <a class="view-btn" target="_blank">Springer Nature</a>
+        </div>
+      </li>
+
+      <!-- 10 -->
+      <li class="pub-item">
+        <span class="pub-index">[10]</span>
+        <div class="pub-content">
+          <p class="title"><strong>3D CNN to Estimate Reaction Time from Multi-Channel EEG</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais,
+            G. Brewer, and D. W. Bliss</p>
+          <p class="venue"><em>International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em>, 2021</p>
+          <a class="view-btn" href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/9630748" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+
+      <!-- 11 -->
+      <li class="pub-item">
+        <span class="pub-index">[11]</span>
+        <div class="pub-content">
+          <p class="title"><strong>A Generalized Model to Estimate Reaction Time Corresponding to Visual Stimulus Using
+            Single-Trial EEG</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, M. K. Robison, C. Blais,
+            G. Brewer, and D. W. Bliss</p>
+          <p class="venue"><em>International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)</em>, 2020</p>
+          <a class="view-btn" href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://ieeexplore.ieee.org/document/9175239" target="_blank">IEEE <em>Xplore</em></a>
+        </div>
+      </li>
+    </ul>
+
+    <h3>Patent</h3>
+    <ul class="pub-list">
+      <!-- 12 -->
+      <li class="pub-item">
+        <span class="pub-index">[12]</span>
+        <div class="pub-content">
+          <p class="title"><strong>Biometric Identification Using Electroencephalogram (EEG) Signals</strong></p>
+          <p class="authors"><span class="highlight">M. S. N. Chowdhury</span>, A. Dutta, D. W. Bliss, G. Brewer, C. Blais,
+            and M. Robison</p>
+          <p class="venue"><em>U.S. Patent Application</em> 17/402,049, 2022</p>
+          <a class="view-btn" href="publications/chowdhury_2022_biometry.pdf" target="_blank">PDF</a>
+          <a class="view-btn" href="https://patents.google.com/patent/US20220051039A1" target="_blank">Google Patents</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  &copy; 2025 Mohammad Samin Nur Chowdhury
+</footer>
+
+<script>
+  // Select all dropdown links
+  const dropdownLinks = document.querySelectorAll('.dropdown-content a');
+
+  dropdownLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Close the dropdown when a link is clicked
+      const dropdown = link.closest('.dropdown');
+      if (dropdown) {
+        dropdown.classList.remove('show');
+      }
+    });
+  });
+</script>
+
+<script>
+// Toggle dropdown on click
+document.addEventListener("DOMContentLoaded", function () {
+const dropdown = document.querySelector(".dropdown");
+const dropbtn = document.querySelector(".dropbtn");
+
+
+dropbtn.addEventListener("click", function (event) {
+event.preventDefault(); // prevent jump until script adds it
+
+
+// Toggle visibility
+dropdown.classList.toggle("show");
+
+
+// Scroll to #research as usual
+document.querySelector("#research").scrollIntoView({ behavior: "smooth" });
+});
+
+
+// Close dropdown if clicking outside
+document.addEventListener("click", function(event) {
+if (!dropdown.contains(event.target)) {
+dropdown.classList.remove("show");
+}
+});
+});
+</script>
+
+<!-- Hover zoom script -->
+<script>
+const images = document.querySelectorAll('.site-images img');
+
+images.forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    const rect = img.getBoundingClientRect();
+    const container = img.closest('.site-images').getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const cw = container.width;
+    const ch = container.height;
+
+    const maxScale = 2;
+    const scaleX = cw / rect.width;
+    const scaleY = (vh - 20) / rect.height;
+    const scale = Math.min(maxScale, scaleX, scaleY);
+    const zoomedWidth = rect.width * Math.max(scale, 1);
+    const zoomedHeight = rect.height * Math.max(scale, 1);
+
+    let translateX = 0;
+    let translateY = 0;
+
+    const extraW = (zoomedWidth - rect.width) / 2;
+    const extraH = (zoomedHeight - rect.height) / 2;
+
+    // Check horizontal overflow
+    const leftOverflow  = extraW - rect.left + container.left;
+    const rightOverflow = (rect.right + extraW) - (container.left + cw);
+
+    if (leftOverflow > 0) translateX += leftOverflow;
+    if (rightOverflow > 0) translateX -= rightOverflow;
+
+    // Check vertical overflow
+    const topOverflow = extraH - rect.top;
+    const bottomOverflow = (rect.bottom + extraH) - vh;
+
+    if (topOverflow > 0) translateY += topOverflow + 10;
+    if (bottomOverflow > 0) translateY -= bottomOverflow + 10;
+
+    // Apply transform with translation + scale
+    img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    img.style.zIndex = 9999999;
+    img.style.position = 'relative'; // keeps it above siblings
+  });
+
+  img.addEventListener('mouseleave', () => {
+    img.style.transition = 'none'; // instant zoom-out
+    img.style.transform = 'scale(1)';
+    img.style.zIndex = 1;
+    img.style.position = 'relative';
+
+    // Force reflow to re-enable transition for next hover
+    void img.offsetWidth;
+    img.style.transition = 'transform 1s ease, z-index 0.1s ease';
+  });
+});
+</script>
+
+</body>
+</html>
