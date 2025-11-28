@@ -907,8 +907,9 @@
               <li style="margin-bottom:15px;">
                 <strong style="color:#fff;">Fast Hyperspectral Reconstruction (FHR):</strong> Performs over 1,000 3D reconstructions
                 in under an hour—more than 10× faster than traditional approaches—while reducing noise and improving image
-                quality. Sequential dehydration, tomographic reconstruction, and rehydration. This work received the Best
-                Presentation Award at the 12th World Conference on Neutron Radiography (WCNR), 2024
+                quality. Sequential dehydration, tomographic reconstruction, and rehydration enable this speed and fidelity.
+                This work received the Best Presentation Award at the <em>12th World Conference on Neutron Radiography (WCNR)</em>,
+                2024
                 <a href="publications/chowdhury_2024_fast_hyper_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -926,10 +927,10 @@
               <li style="margin-bottom:15px;">
                 <strong style="color:#fff;">Fast Material Decomposition (FMD):</strong> Provides 10× faster volumetric material
                 separation and 25+ dB SNR improvement through sequential implementation of dehydration, tomographic reconstruction,
-                and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at the IEEE
-                International Conference on Image Processing (ICIP), 2023
+                and subspace-to-material transformation. An earlier version earned the Best Student Paper Award at the <em>IEEE
+                International Conference on Image Processing (ICIP)</em>, 2023
                 <a href="publications/chowdhury_2023_auto_material_decomp.pdf" target="_blank" class="dir-link">[paper]</a>,
-                and the extended version was published in IEEE Transactions on Computational Imaging (2025)
+                and the extended version was published in <em>IEEE Transactions on Computational Imaging</em> (2025)
                 <a href="publications/chowdhury_2025_fast_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -979,10 +980,10 @@
             <ul style="list-style:none; padding:0; margin:0;">
               <li style="margin-left:0; margin-bottom:15px;">
                 <strong style="color:#fff;">MACE Model:</strong> A Multi-Agent Consensus Equilibrium (MACE) framework that
-                integrates a sinogram-domain forward model, model-based iterative reconstruction (MBIR), and physics-based
+                integrates a sinogram-domain forward model, Model-Based Iterative Reconstruction (MBIR), and physics-based
                 constraints to iteratively recover accurate 2D strain tensors. We call this algorithm Model-Oriented Neutron
-                Strain Tomographic Reconstruction (MONSTR). This work was presented at the IEEE International Conference
-                on Image Processing (ICIP), 2025
+                Strain Tomographic Reconstruction (MONSTR). This work was presented at the <em>IEEE International Conference
+                on Image Processing (ICIP)</em>, 2025
                 <a href="publications/chowdhury_2025_monstr.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -1001,9 +1002,9 @@
               </div>
 
               <li style="margin-left:0; margin-bottom:15px;">
-                <strong style="color:#fff;">GAN Model:</strong> A generative adversarial network (GAN) where the generator
-                reconstructs 2D strain tensors and the discriminator enforces structural realism guided by physics-based
-                constraints. We plan to present this work at an upcoming conference.
+                <strong style="color:#fff;">GAN Model:</strong> A generative adversarial network (GAN) where the generator reconstructs
+                2D strain tensors and the discriminator enforces structural realism guided by physics-based constraints.
+                We plan to present this work at an upcoming conference.
               </li>
               <div class="site-images">
                 <figure>
@@ -1039,8 +1040,8 @@
                 <strong style="color:#fff;">Adaptive Orientation Selection:</strong> Optimizes sample orientation selection
                 based on edge alignment, reducing the number of measurements required for high-quality reconstructions.
                 When applied to simulated and measured data, it significantly outperformed traditional golden-ratio-based
-                view selection. This work received the Top 3% Contribution Award at the IEEE International Conference on
-                Acoustics, Speech, and Signal Processing (ICASSP), 2023
+                view selection. This work received the Top 3% Contribution Award at the <em>IEEE International Conference on
+                Acoustics, Speech, and Signal Processing (ICASSP)</em>, 2023
                 <a href="publications/chowdhury_2023_edge_alignment.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -1057,8 +1058,8 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 <strong style="color:#fff;">Machine Learning Decision Criterion:</strong> Reduced hyperspectral data collection
                 time by 5× at ORNL by combining advanced reconstruction algorithms with a machine learning–based protocol
-                that terminates experiments once sufficient information is acquired. This work was published in Scientific
-                Reports by Nature (2024)
+                that terminates experiments once sufficient information is acquired. This work was published in <em>Scientific
+                Reports</em> by <em>Nature</em> (2024)
                 <a href="publications/chowdhury_2024_ml_decision_hyper_neutron_ct.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -1153,13 +1154,13 @@
           </div>
           <div style="color:#ccc;">
             We previously proposed a fast material decomposition algorithm capable of volumetrically separating materials
-            in a sample using hyperspectral neutron CT data. However, for objects with complex geometries or heterogeneous
-            compositions, relying on a single-pose dataset can lead to inaccurate material decomposition.<br><br>
+            in a sample using hyperspectral neutron CT data from a single pose. However, for objects with complex geometries
+            or heterogeneous compositions, relying on a single-pose dataset can lead to inaccurate material decomposition.<br><br>
 
             To overcome this limitation, we developed a multi-pose fusion algorithm that integrates data acquired from multiple
             sample poses—i.e., distinct tilt configurations—within a Multi-Agent Consensus Equilibrium (MACE) framework,
-            enabling highly accurate and robust material decomposition. This work was presented at the Asilomar Conference
-            on Signals, Systems, and Computers, 2024
+            enabling highly accurate and robust material decomposition. This work was presented at the <em>Asilomar Conference
+            on Signals, Systems, and Computers</em>, 2024
             <a href="publications/chowdhury_2024_multi_pose_fusion.pdf" target="_blank" class="dir-link">[paper]</a>.
             <div class="site-images">
               <figure>
@@ -1190,10 +1191,11 @@
             measurements from a wide range of views for full tomographic reconstruction. However, sparse-view reconstructions
             produced by traditional methods typically suffer from severe artifacts and loss of detail.<br><br>
 
-            To address this limitation, we proposed a reconstruction framework that first computes a low-quality sparse-view
-            reconstruction and then enhances it using a deep neural network trained on pairs of low-quality and high-quality
-            reconstructions of the same samples. This hybrid method yields significantly improved reconstructions over conventional
-            sparse-view techniques. The work was presented at the 12th World Conference on Neutron Radiography (WCNR), 2024
+            To address this limitation, we proposed a hybrid reconstruction framework that first computes a low-quality
+            sparse-view reconstruction and then enhances it using a deep neural network trained on pairs of low-quality
+            and high-quality reconstructions of the same samples. This hybrid method yields significantly improved reconstructions
+            over conventional sparse-view techniques. The work was presented at the <em>12th World Conference on Neutron
+            Radiography (WCNR)</em>, 2024
             <a href="publications/chowdhury_2024_ai_tof_neutron_recon.pdf" target="_blank" class="dir-link">[paper]</a>.
             <div class="site-images">
               <figure>
@@ -1231,8 +1233,8 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 <strong style="color:#fff;">ML Models:</strong> Implemented multiple machine learning models for both classification
                 and regression tasks, achieving 79% accuracy in binary classification and 74% correlation in regression.
-                This work was presented at the International Conference of the IEEE Engineering in Medicine and Biology
-                Society (EMBC), 2020
+                This work was presented at the International Conference of the <em>IEEE Engineering in Medicine and Biology
+                Society (EMBC)</em>, 2020
                 <a href="publications/chowdhury_2020_general_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -1249,7 +1251,7 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 <strong style="color:#fff;">CNN + Random Forest:</strong> Achieved 94% binary classification accuracy using
                 a CNN model, and 80% regression correlation by combining the CNN model with a Random Forest model. This
-                work was published in Sensors (2020)
+                work was published in <em>Sensors</em> (2020)
                 <a href="publications/chowdhury_2020_dnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
@@ -1266,8 +1268,8 @@
               <li style="margin-left:0; margin-bottom:15px;">
                 <strong style="color:#fff;">3D-CNN:</strong> Designed a 3D convolutional neural network (3D-CNN) that leverages
                 inter-channel spatio-temporal relationships in EEG signals, achieving 83% regression correlation. This work
-                was presented at the International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC),
-                2021
+                was presented at the International Conference of the <em>IEEE Engineering in Medicine and Biology Society
+                (EMBC)</em>, 2021
                 <a href="publications/chowdhury_2021_3d_cnn_reaction_time.pdf" target="_blank" class="dir-link">[paper]</a>.
               </li>
               <div class="site-images">
